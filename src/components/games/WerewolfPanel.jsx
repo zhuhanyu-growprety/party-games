@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Info } from 'lucide-react';
 
 const ROLES = ['狼人', '村民', '预言家', '女巫', '猎人'];
@@ -10,24 +10,25 @@ const PHASES = [
   { key: 'vote', label: '投票阶段' },
 ];
 
+const INITIAL_SESSION = { identity: null, phase: 'preparing' };
+
 function pickRandomRole() {
   return ROLES[Math.floor(Math.random() * ROLES.length)];
 }
 
-export default function WerewolfPanel() {
-  const [identity, setIdentity] = useState(null);
-  const [phase, setPhase] = useState('preparing');
+export { INITIAL_SESSION as WEREWOLF_INITIAL_SESSION };
+
+export function isWerewolfSessionStarted(session) {
+  return session?.identity != null;
+}
+
+export default function WerewolfPanel({ session, onSessionChange }) {
+  const { identity, phase } = session;
   const dealt = identity !== null;
 
   function handleDeal() {
     if (dealt) return;
-    setIdentity(pickRandomRole());
-    setPhase('preparing');
-  }
-
-  function handleReset() {
-    setIdentity(null);
-    setPhase('preparing');
+    onSessionChange({ identity: pickRandomRole(), phase: 'preparing' });
   }
 
   return (
@@ -80,24 +81,18 @@ export default function WerewolfPanel() {
           onClick={handleDeal}
           disabled={dealt}
         >
-          {dealt ? '本轮已发牌' : '开始发牌'}
+          {dealt ? '身份已发放' : '开始发牌'}
         </button>
-        <button type="button" className="btn btn-night" onClick={() => setPhase('night')}>
+        <button type="button" className="btn btn-night" onClick={() => onSessionChange({ ...session, phase: 'night' })}>
           进入夜晚
         </button>
-        <button type="button" className="btn btn-day" onClick={() => setPhase('day')}>
+        <button type="button" className="btn btn-day" onClick={() => onSessionChange({ ...session, phase: 'day' })}>
           进入白天
         </button>
-        <button type="button" className="btn btn-vote" onClick={() => setPhase('vote')}>
+        <button type="button" className="btn btn-vote" onClick={() => onSessionChange({ ...session, phase: 'vote' })}>
           进入投票
         </button>
       </div>
-
-      {dealt && (
-        <button type="button" className="btn btn-secondary werewolf-btn-reset" onClick={handleReset}>
-          重新开局
-        </button>
-      )}
 
       <div className="werewolf-rules">
         <h4>本局说明</h4>

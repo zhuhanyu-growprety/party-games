@@ -266,16 +266,6 @@
   transform: none;
 }
 
-.werewolf-btn-reset {
-  align-self: center;
-  width: fit-content;
-  margin: -0.35rem auto 0;
-  padding: 0.45rem 1rem;
-  font-size: 0.8rem;
-  font-weight: 500;
-  opacity: 0.85;
-}
-
 .werewolf-actions .btn-night {
   box-shadow: 0 4px 16px rgba(30, 58, 138, 0.35);
 }

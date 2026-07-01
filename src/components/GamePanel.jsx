@@ -1,7 +1,7 @@
 import WerewolfPanel from './games/WerewolfPanel';
 import PlaceholderPanel from './games/PlaceholderPanel';
 
-export default function GamePanel({ game }) {
+export default function GamePanel({ game, werewolfSession, onWerewolfSessionChange }) {
   if (!game) {
     return (
       <div className="game-panel">
@@ -11,7 +11,12 @@ export default function GamePanel({ game }) {
   }
 
   if (game.id === 'werewolf') {
-    return <WerewolfPanel />;
+    return (
+      <WerewolfPanel
+        session={werewolfSession}
+        onSessionChange={onWerewolfSessionChange}
+      />
+    );
   }
 
   return <PlaceholderPanel game={game} />;

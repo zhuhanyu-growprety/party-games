@@ -8,8 +8,17 @@ import PlayerList from '../components/room/PlayerList';
 import GameList from '../components/room/GameList';
 import RulesSummary from '../components/room/RulesSummary';
 import GamePanel from '../components/GamePanel';
+import {
+  WEREWOLF_INITIAL_SESSION,
+  isWerewolfSessionStarted,
+} from '../components/games/WerewolfPanel';
 import '../styles/room.css';
 import '../styles/game-panel.css';
+
+const SWITCH_GAME_CONFIRM =
+  '当前狼人杀本局已经开始，切换游戏会结束本局并清空身份，确定继续吗？';
+const LEAVE_ROOM_CONFIRM =
+  '当前游戏已经开始，退出房间会结束本局，确定退出吗？';
 
 export default function RoomPage() {
   const { code } = useParams();
@@ -22,6 +31,7 @@ export default function RoomPage() {
   const games = getAllGames();
   const [selectedGameId, setSelectedGameId] = useState('werewolf');
   const selectedGame = getGameById(selectedGameId);
+  const [werewolfSession, setWerewolfSession] = useState(WEREWOLF_INITIAL_SESSION);
 
   const [players, setPlayers] = useState([]);
 
@@ -34,6 +44,28 @@ export default function RoomPage() {
   }, [code, nickname, isHost]);
 
   const displayNickname = nickname.trim() || '临时玩家';
+
+  function isCurrentGameStarted() {
+    if (selectedGameId === 'werewolf') {
+      return isWerewolfSessionStarted(werewolfSession);
+    }
+    return false;
+  }
+
+  function resetWerewolfSession() {
+    setWerewolfSession(WEREWOLF_INITIAL_SESSION);
+  }
+
+  function handleSelectGame(gameId) {
+    if (gameId === selectedGameId) return;
+
+    if (isCurrentGameStarted()) {
+      if (!window.confirm(SWITCH_GAME_CONFIRM)) return;
+      resetWerewolfSession();
+    }
+
+    setSelectedGameId(gameId);
+  }
 
   function handleCopy() {
     navigator.clipboard?.writeText(code).catch(() => {});
@@ -51,7 +83,10 @@ export default function RoomPage() {
     }
   }
 
-  function handleExit() {
+  function handleLeaveRoom() {
+    if (isCurrentGameStarted()) {
+      if (!window.confirm(LEAVE_ROOM_CONFIRM)) return;
+    }
     navigate('/');
   }
 
@@ -69,7 +104,7 @@ export default function RoomPage() {
         isHost={isHost}
         onCopy={handleCopy}
         onInvite={handleInvite}
-        onExit={handleExit}
+        onExit={handleLeaveRoom}
       />
 
       <div className="room-body">
@@ -78,14 +113,18 @@ export default function RoomPage() {
         </aside>
 
         <main className="room-main">
-          <GamePanel game={selectedGame} />
+          <GamePanel
+            game={selectedGame}
+            werewolfSession={werewolfSession}
+            onWerewolfSessionChange={setWerewolfSession}
+          />
         </main>
 
         <aside className="room-sidebar room-sidebar-right">
           <GameList
             games={games}
             selectedId={selectedGameId}
-            onSelect={setSelectedGameId}
+            onSelect={handleSelectGame}
           />
           <RulesSummary game={selectedGame} />
         </aside>
