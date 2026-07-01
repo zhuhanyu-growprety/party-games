@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import { Info } from 'lucide-react';
 
 const ROLES = ['狼人', '村民', '预言家', '女巫', '猎人'];
@@ -10,25 +9,31 @@ const PHASES = [
   { key: 'vote', label: '投票阶段' },
 ];
 
-const INITIAL_SESSION = { identity: null, phase: 'preparing' };
+export const WEREWOLF_INITIAL_SESSION = {
+  identity: null,
+  phase: 'preparing',
+  started: false,
+};
 
 function pickRandomRole() {
   return ROLES[Math.floor(Math.random() * ROLES.length)];
 }
 
-export { INITIAL_SESSION as WEREWOLF_INITIAL_SESSION };
-
 export function isWerewolfSessionStarted(session) {
-  return session?.identity != null;
+  return session?.started === true;
 }
 
 export default function WerewolfPanel({ session, onSessionChange }) {
-  const { identity, phase } = session;
-  const dealt = identity !== null;
+  const { identity, phase, started } = session;
+  const dealt = started;
 
   function handleDeal() {
     if (dealt) return;
-    onSessionChange({ identity: pickRandomRole(), phase: 'preparing' });
+    onSessionChange({
+      identity: pickRandomRole(),
+      phase: 'preparing',
+      started: true,
+    });
   }
 
   return (

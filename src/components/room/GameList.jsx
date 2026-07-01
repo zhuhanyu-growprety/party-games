@@ -1,4 +1,4 @@
-export default function GameList({ games, selectedId, onSelect }) {
+export default function GameList({ games, selectedId, onSelectGame }) {
   return (
     <div className="game-list-wrap">
       <h3 className="game-list-title">切换游戏</h3>
@@ -8,7 +8,7 @@ export default function GameList({ games, selectedId, onSelect }) {
             <button
               type="button"
               className={`game-list-item${selectedId === game.id ? ' active' : ''}`}
-              onClick={() => onSelect(game.id)}
+              onClick={() => onSelectGame(game.id)}
             >
               <span className="game-list-thumb-wrap" aria-hidden="true">
                 <img

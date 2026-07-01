@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getNickname, getRoomRole, getCreatedRoomCode } from '../lib/storage';
 import { ensureCurrentPlayerInRoom } from '../lib/roomPlayers';
@@ -32,8 +32,12 @@ export default function RoomPage() {
   const [selectedGameId, setSelectedGameId] = useState('werewolf');
   const selectedGame = getGameById(selectedGameId);
   const [werewolfSession, setWerewolfSession] = useState(WEREWOLF_INITIAL_SESSION);
-
   const [players, setPlayers] = useState([]);
+
+  const selectedGameIdRef = useRef(selectedGameId);
+  const werewolfSessionRef = useRef(werewolfSession);
+  selectedGameIdRef.current = selectedGameId;
+  werewolfSessionRef.current = werewolfSession;
 
   useEffect(() => {
     if (!code) {
@@ -46,8 +50,8 @@ export default function RoomPage() {
   const displayNickname = nickname.trim() || '临时玩家';
 
   function isCurrentGameStarted() {
-    if (selectedGameId === 'werewolf') {
-      return isWerewolfSessionStarted(werewolfSession);
+    if (selectedGameIdRef.current === 'werewolf') {
+      return isWerewolfSessionStarted(werewolfSessionRef.current);
     }
     return false;
   }
@@ -57,7 +61,7 @@ export default function RoomPage() {
   }
 
   function handleSelectGame(gameId) {
-    if (gameId === selectedGameId) return;
+    if (gameId === selectedGameIdRef.current) return;
 
     if (isCurrentGameStarted()) {
       if (!window.confirm(SWITCH_GAME_CONFIRM)) return;
@@ -124,7 +128,7 @@ export default function RoomPage() {
           <GameList
             games={games}
             selectedId={selectedGameId}
-            onSelect={handleSelectGame}
+            onSelectGame={handleSelectGame}
           />
           <RulesSummary game={selectedGame} />
         </aside>
