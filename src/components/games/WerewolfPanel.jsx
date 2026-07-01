@@ -17,9 +17,16 @@ function pickRandomRole() {
 export default function WerewolfPanel() {
   const [identity, setIdentity] = useState(null);
   const [phase, setPhase] = useState('preparing');
+  const dealt = identity !== null;
 
   function handleDeal() {
+    if (dealt) return;
     setIdentity(pickRandomRole());
+    setPhase('preparing');
+  }
+
+  function handleReset() {
+    setIdentity(null);
     setPhase('preparing');
   }
 
@@ -67,8 +74,13 @@ export default function WerewolfPanel() {
       </div>
 
       <div className="werewolf-actions">
-        <button type="button" className="btn btn-primary werewolf-btn-deal" onClick={handleDeal}>
-          开始发牌
+        <button
+          type="button"
+          className="btn btn-primary werewolf-btn-deal"
+          onClick={handleDeal}
+          disabled={dealt}
+        >
+          {dealt ? '本轮已发牌' : '开始发牌'}
         </button>
         <button type="button" className="btn btn-night" onClick={() => setPhase('night')}>
           进入夜晚
@@ -80,6 +92,12 @@ export default function WerewolfPanel() {
           进入投票
         </button>
       </div>
+
+      {dealt && (
+        <button type="button" className="btn btn-secondary werewolf-btn-reset" onClick={handleReset}>
+          重新开局
+        </button>
+      )}
 
       <div className="werewolf-rules">
         <h4>本局说明</h4>
