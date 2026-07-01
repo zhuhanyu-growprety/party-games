@@ -1,3 +1,5 @@
+import { getPlayerAvatar } from '../../lib/avatars';
+
 export default function PlayerList({ players, maxPlayers = 12 }) {
   return (
     <div className="player-list-wrap">
@@ -8,8 +10,12 @@ export default function PlayerList({ players, maxPlayers = 12 }) {
       <ul className="player-list">
         {players.map((player) => (
           <li key={player.id} className="player-item">
-            <span className="player-avatar" aria-hidden="true">
-              {player.name.charAt(0)}
+            <span className="player-avatar">
+              <img
+                src={getPlayerAvatar(player.id)}
+                alt=""
+                aria-hidden="true"
+              />
             </span>
             <div className="player-info">
               <span className="player-name">
