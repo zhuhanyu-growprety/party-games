@@ -1,0 +1,251 @@
+.game-panel {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.game-panel-empty {
+  color: var(--text-muted);
+  text-align: center;
+  padding: 3rem;
+}
+
+.game-panel-header {
+  margin-bottom: 1.5rem;
+}
+
+.game-panel-header h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+}
+
+.game-panel-header p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+/* Placeholder panel */
+.placeholder-panel .game-panel-placeholder {
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.placeholder-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.placeholder-status {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-hint {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.placeholder-range {
+  font-size: 0.75rem;
+  color: var(--purple-light);
+  background: var(--accent-dim);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Werewolf panel */
+.werewolf-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.werewolf-panel .game-panel-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.werewolf-header-icon {
+  font-size: 2rem;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.phase-stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.phase-step {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+  position: relative;
+}
+
+.phase-step-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--border-bright);
+  flex-shrink: 0;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.phase-step.active .phase-step-dot {
+  background: var(--purple);
+  box-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
+}
+
+.phase-step.done .phase-step-dot {
+  background: var(--purple-light);
+}
+
+.phase-step-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.phase-step.active .phase-step-label {
+  color: var(--purple-light);
+  font-weight: 600;
+}
+
+.phase-step-line {
+  flex: 1;
+  height: 2px;
+  background: var(--border);
+  margin: 0 0.35rem;
+}
+
+.werewolf-identity-card {
+  padding: 2.5rem 1.5rem;
+  background:
+    radial-gradient(ellipse at center, rgba(30, 58, 138, 0.2) 0%, transparent 70%),
+    var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-align: center;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.werewolf-identity-icon {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.werewolf-identity-icon.waiting {
+  opacity: 0.6;
+}
+
+.werewolf-identity-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.werewolf-identity-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--purple-light);
+}
+
+.werewolf-identity-value.waiting {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.werewolf-actions {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.werewolf-actions .btn {
+  padding: 0.7rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+.werewolf-rules {
+  padding: 1rem 1.25rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.werewolf-rules h4 {
+  font-size: 0.85rem;
+  color: var(--purple-light);
+  margin-bottom: 0.6rem;
+  font-weight: 600;
+}
+
+.werewolf-rules ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.werewolf-rules li {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  padding-left: 0.85rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.werewolf-rules li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--purple-light);
+}
+
+.werewolf-footer-tip {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  justify-content: center;
+}
+
+@media (max-width: 640px) {
+  .phase-stepper {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .phase-step-line {
+    display: none;
+  }
+
+  .werewolf-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

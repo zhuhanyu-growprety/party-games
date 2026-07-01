@@ -1,0 +1,92 @@
+[
+  {
+    "id": "undercover",
+    "title": "谁是卧底",
+    "slug": "undercover",
+    "shortIntro": "每人拿到相近词语，找出那个词不一样的人",
+    "playerRange": "4-10人",
+    "type": "word",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "werewolf",
+    "title": "狼人杀",
+    "slug": "werewolf",
+    "shortIntro": "经典身份局，手机发牌，桌上博弈",
+    "playerRange": "6-12人",
+    "type": "identity",
+    "roomFriendly": true,
+    "status": "active"
+  },
+  {
+    "id": "king",
+    "title": "国王游戏",
+    "slug": "king",
+    "shortIntro": "随机国王发号施令，气氛瞬间升温",
+    "playerRange": "3-12人",
+    "type": "party",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "whoami",
+    "title": "我是谁",
+    "slug": "whoami",
+    "shortIntro": "额头贴词，通过提问猜出自己的身份",
+    "playerRange": "3-10人",
+    "type": "word",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "garden",
+    "title": "逛三园",
+    "slug": "garden",
+    "shortIntro": "随机主题口头接龙，反应慢就出局",
+    "playerRange": "3-12人",
+    "type": "party",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "bomb",
+    "title": "数字炸弹",
+    "slug": "bomb",
+    "shortIntro": "在缩小的范围内猜数字，踩雷就输",
+    "playerRange": "2-8人",
+    "type": "number",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "truth-dare",
+    "title": "真心话大冒险",
+    "slug": "truth-dare",
+    "shortIntro": "随机抽取真心话或大冒险挑战",
+    "playerRange": "2-12人",
+    "type": "party",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "turtle-soup",
+    "title": "海龟汤",
+    "slug": "turtle-soup",
+    "shortIntro": "主持人给出汤面，大家提问还原故事",
+    "playerRange": "3-10人",
+    "type": "story",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
+    "id": "wheel",
+    "title": "幸运转盘",
+    "slug": "wheel",
+    "shortIntro": "自定义选项转盘，随机决定今晚玩什么",
+    "playerRange": "2-12人",
+    "type": "tool",
+    "roomFriendly": true,
+    "status": "placeholder"
+  }
+]

@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f7f3eb;
+  --color-paper-dark: #ede6d8;
+  --color-ink: #2c2416;
+  --color-ink-muted: #5c4f3a;
+  --color-accent: #8b5e3c;
+  --color-accent-light: #c4a882;
+  --color-bookmark: #d4a574;
+  --color-card: #fefcf8;
+  --font-serif: "Noto Serif SC", "Source Han Serif SC", "Songti SC", Georgia, serif;
+  --font-sans: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-serif);
+}
+
+.section-title {
+  @apply font-serif text-xl font-semibold text-ink flex items-center gap-2;
+}
+.section-title::before {
+  content: '';
+  @apply w-1 h-5 bg-accent rounded-full shrink-0;
+}
+
+/* 卡片悬浮 */
+.card-hover {
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-hover:hover {
+  box-shadow: 0 8px 24px rgba(44, 36, 22, 0.08);
+  transform: translateY(-1px);
+}
+
+/* 按钮 */
+.btn-primary {
+  @apply py-2 px-4 bg-accent text-white text-sm rounded-md font-medium;
+  @apply hover:bg-accent/90 active:scale-[0.98] transition-all shadow-sm hover:shadow;
+}
+.btn-secondary {
+  @apply py-2 px-4 border border-accent/40 text-accent text-sm rounded-md font-medium;
+  @apply hover:bg-accent/10 active:scale-[0.98] transition-all;
+}
+.btn-ghost {
+  @apply py-2 px-4 border border-paper-dark text-ink-muted text-sm rounded-md;
+  @apply hover:bg-paper-dark/50 transition-colors;
+}
+
+/* 书签标签 */
+.bookmark-tag {
+  position: relative;
+  padding-left: 0.65rem;
+}
+.bookmark-tag::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 3px;
+  height: 70%;
+  background: var(--color-bookmark);
+  border-radius: 1px;
+}
+
+/* 阅读进度条 */
+.reading-bar {
+  @apply h-1.5 bg-paper-dark rounded-full overflow-hidden;
+}
+.reading-bar-fill {
+  @apply h-full rounded-full transition-all duration-500;
+  background: linear-gradient(90deg, var(--color-accent-light), var(--color-accent));
+}
+
+/* 时间线 */
+.timeline-line {
+  background: linear-gradient(180deg, var(--color-accent) 0%, var(--color-accent-light) 50%, transparent 100%);
+}

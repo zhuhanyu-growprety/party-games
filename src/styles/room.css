@@ -1,0 +1,379 @@
+.room-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-deep);
+}
+
+.room-header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--bg-card);
+  border-bottom: 1px solid var(--border);
+}
+
+.room-header-brand {
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.room-header-center {
+  display: flex;
+  justify-content: center;
+}
+
+.room-code-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.75rem;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+}
+
+.room-code-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.room-code-value {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--purple-light);
+}
+
+.room-header-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.room-user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.room-user-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--gradient-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.room-user-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.room-host-badge {
+  font-size: 0.7rem;
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+  background: rgba(234, 179, 8, 0.15);
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.room-body {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 240px 1fr 260px;
+  min-height: 0;
+}
+
+.room-sidebar {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: calc(100vh - 56px);
+}
+
+.room-sidebar-left {
+  border-right: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 1rem;
+}
+
+.room-sidebar-right {
+  border-left: 1px solid var(--border);
+  background: var(--bg-card);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.room-main {
+  padding: 1.25rem 1.5rem;
+  overflow-y: auto;
+  max-height: calc(100vh - 56px);
+}
+
+/* Player list */
+.player-list-wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.player-list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.player-list-header h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.player-count {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: var(--bg-elevated);
+  padding: 0.15rem 0.5rem;
+  border-radius: 4px;
+}
+
+.player-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.55rem 0.65rem;
+  background: var(--bg-elevated);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border);
+}
+
+.player-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--gradient-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.player-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  min-width: 0;
+}
+
+.player-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.player-host-tag {
+  font-size: 0.65rem;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  background: rgba(234, 179, 8, 0.15);
+  color: #fbbf24;
+  font-weight: 600;
+}
+
+.player-status {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.player-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+}
+
+.player-list-deco {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  opacity: 0.4;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+/* Game list (right sidebar) */
+.game-list-wrap {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.game-list-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.6rem;
+}
+
+.game-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.game-list-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+  padding: 0.55rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: background 0.12s, color 0.12s;
+  border: 1px solid transparent;
+}
+
+.game-list-item:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+}
+
+.game-list-item.active {
+  background: rgba(37, 99, 235, 0.15);
+  color: var(--purple-light);
+  border-color: rgba(37, 99, 235, 0.3);
+  font-weight: 600;
+}
+
+.game-list-icon {
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.game-list-name {
+  flex: 1;
+}
+
+.game-list-arrow {
+  font-size: 1.1rem;
+  color: var(--purple-light);
+}
+
+/* Rules summary */
+.rules-summary {
+  padding: 1rem;
+  flex-shrink: 0;
+}
+
+.rules-summary h3 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  color: var(--text-primary);
+}
+
+.rules-summary ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.75rem;
+}
+
+.rules-summary li {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  padding-left: 0.85rem;
+  position: relative;
+  line-height: 1.5;
+}
+
+.rules-summary li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--purple-light);
+}
+
+.rules-link {
+  font-size: 0.78rem;
+  color: var(--purple-light);
+}
+
+@media (max-width: 960px) {
+  .room-header {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .room-header-left {
+    display: none;
+  }
+
+  .room-header-right {
+    justify-content: center;
+  }
+
+  .room-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .room-sidebar {
+    max-height: none;
+  }
+
+  .room-sidebar-left {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .room-sidebar-right {
+    border-left: none;
+    border-top: 1px solid var(--border);
+  }
+
+  .room-main {
+    max-height: none;
+  }
+
+  .player-list-deco {
+    display: none;
+  }
+}
