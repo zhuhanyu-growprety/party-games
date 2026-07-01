@@ -61,27 +61,30 @@ export default function PartyHomePage() {
       <HomeNav />
 
       <main className="home-main">
-        <section className="home-hero">
-          <div className="home-hero-text">
-            <h1 className="home-title">聚会游戏合集</h1>
-            <p className="home-subtitle">不带卡牌也能快速开局的聚会游戏房间工具</p>
-            <div className="home-desc">
-              <p>面向朋友聚会、宿舍夜聊、生日局、轰趴和破冰场景。</p>
-              <p>手机负责发身份、发词、抽题和阶段提示。</p>
-              <p>真正的讨论与投票留在现场。</p>
+        <div className="home-intro-block">
+          <section className="home-hero">
+            <div className="home-hero-text">
+              <h1 className="home-title">聚会游戏合集</h1>
+              <p className="home-subtitle">不带卡牌也能快速开局的聚会游戏房间工具</p>
+              <div className="home-desc">
+                <p>面向朋友聚会、宿舍夜聊、生日局、轰趴和破冰场景。</p>
+                <p>手机负责发身份、发词、抽题和阶段提示。</p>
+                <p>真正的讨论与投票留在现场。</p>
+              </div>
             </div>
-          </div>
-          <div className="home-hero-illustration">
-            <img
-              className="home-hero-image"
-              src="/illustrations/home-hero.png"
-              alt=""
-              aria-hidden="true"
-            />
-          </div>
-        </section>
+            <div className="home-hero-illustration">
+              <div className="home-hero-image-frame">
+                <img
+                  className="home-hero-image"
+                  src="/illustrations/home-hero.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+              </div>
+            </div>
+          </section>
 
-        <section className="home-action-bar">
+          <section className="home-action-bar">
           <div className="home-action-group">
             <label htmlFor="nickname">昵称</label>
             <div className="home-input-wrap">
@@ -127,6 +130,7 @@ export default function PartyHomePage() {
 
           {error && <p className="home-error">{error}</p>}
         </section>
+        </div>
 
         <FeatureCards />
         <GameCarousel />
