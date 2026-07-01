@@ -6,7 +6,6 @@ import { generateRoomCode, normalizeRoomCode, isValidRoomCode } from '../lib/roo
 import HomeNav from '../components/home/HomeNav';
 import FeatureCards from '../components/home/FeatureCards';
 import GameCarousel from '../components/home/GameCarousel';
-import HeroIllustration from '../components/home/HeroIllustration';
 import '../styles/home.css';
 
 export default function PartyHomePage() {
@@ -73,7 +72,12 @@ export default function PartyHomePage() {
             </div>
           </div>
           <div className="home-hero-illustration">
-            <HeroIllustration />
+            <img
+              className="home-hero-image"
+              src="/illustrations/home-hero.png"
+              alt=""
+              aria-hidden="true"
+            />
           </div>
         </section>
 

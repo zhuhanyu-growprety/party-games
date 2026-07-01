@@ -178,12 +178,17 @@
   padding-right: 0.5rem;
 }
 
-.hero-illustration {
+.home-hero-image {
   width: 100%;
   max-width: 520px;
-  min-width: 320px;
+  min-width: 280px;
   height: auto;
-  filter: drop-shadow(0 12px 48px rgba(124, 58, 237, 0.18));
+  max-height: 400px;
+  object-fit: contain;
+  object-position: center right;
+  filter: drop-shadow(0 16px 48px rgba(124, 58, 237, 0.15));
+  mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 82%, transparent 100%);
 }
 
 /* ── action bar (glass card) ── */
@@ -446,13 +451,13 @@
   flex: 0 0 calc((100% - 3rem) / 4.15);
   min-width: 168px;
   max-width: 200px;
-  min-height: 220px;
+  min-height: 240px;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
-  padding: 1.25rem 1.1rem 1.1rem;
+  padding: 0.85rem 0.85rem 1.1rem;
   text-align: center;
-  background: rgba(8, 12, 22, 0.72);
+  background: #0d1325;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
@@ -464,19 +469,22 @@
   transform: translateY(-4px);
 }
 
-.home-game-icon-wrap {
+.home-game-image-wrap {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 72px;
-  margin-bottom: 0.75rem;
-  color: #c4b5fd;
-  filter: drop-shadow(0 0 10px rgba(167, 139, 250, 0.35));
+  height: 96px;
+  margin-bottom: 0.65rem;
+  padding: 0.25rem;
+  border-radius: 12px;
+  background: #0b1020;
 }
 
-.game-card-icon-svg {
-  width: 72px;
-  height: 58px;
+.home-game-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
 }
 
 .home-game-card h3 {
@@ -531,9 +539,10 @@
     padding-right: 0;
   }
 
-  .hero-illustration {
+  .home-hero-image {
     max-width: 440px;
     min-width: 0;
+    object-position: center;
   }
 
   .home-features {

@@ -5,6 +5,7 @@
     "slug": "undercover",
     "shortIntro": "每人拿到相近词语，找出那个词不一样的人",
     "playerRange": "4-10人",
+    "image": "/illustrations/game-undercover.png",
     "type": "word",
     "roomFriendly": true,
     "status": "placeholder"
@@ -15,6 +16,7 @@
     "slug": "werewolf",
     "shortIntro": "经典身份局，手机发牌，桌上博弈",
     "playerRange": "6-12人",
+    "image": "/illustrations/game-werewolf.png",
     "type": "identity",
     "roomFriendly": true,
     "status": "active"
@@ -25,6 +27,7 @@
     "slug": "king",
     "shortIntro": "随机国王发号施令，气氛瞬间升温",
     "playerRange": "3-12人",
+    "image": "/illustrations/game-king.png",
     "type": "party",
     "roomFriendly": true,
     "status": "placeholder"
@@ -35,6 +38,7 @@
     "slug": "whoami",
     "shortIntro": "额头贴词，通过提问猜出自己的身份",
     "playerRange": "3-10人",
+    "image": "/illustrations/game-whoami.png",
     "type": "word",
     "roomFriendly": true,
     "status": "placeholder"
@@ -45,6 +49,7 @@
     "slug": "garden",
     "shortIntro": "随机主题口头接龙，反应慢就出局",
     "playerRange": "3-12人",
+    "image": "/illustrations/game-garden.png",
     "type": "party",
     "roomFriendly": true,
     "status": "placeholder"
@@ -55,6 +60,7 @@
     "slug": "bomb",
     "shortIntro": "在缩小的范围内猜数字，踩雷就输",
     "playerRange": "2-8人",
+    "image": "/illustrations/game-bomb.png",
     "type": "number",
     "roomFriendly": true,
     "status": "placeholder"
@@ -65,6 +71,7 @@
     "slug": "truth-dare",
     "shortIntro": "随机抽取真心话或大冒险挑战",
     "playerRange": "2-12人",
+    "image": "/illustrations/game-truth.png",
     "type": "party",
     "roomFriendly": true,
     "status": "placeholder"
@@ -75,6 +82,7 @@
     "slug": "turtle-soup",
     "shortIntro": "主持人给出汤面，大家提问还原故事",
     "playerRange": "3-10人",
+    "image": "/illustrations/game-soup.png",
     "type": "story",
     "roomFriendly": true,
     "status": "placeholder"
@@ -85,6 +93,7 @@
     "slug": "wheel",
     "shortIntro": "自定义选项转盘，随机决定今晚玩什么",
     "playerRange": "2-12人",
+    "image": "/illustrations/game-spinner.png",
     "type": "tool",
     "roomFriendly": true,
     "status": "placeholder"

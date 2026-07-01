@@ -1,7 +1,6 @@
 import { useRef } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { getAllGames } from '../../lib/games';
-import GameCardIcon from './GameCardIcon';
 
 export default function GameCarousel() {
   const games = getAllGames();
@@ -35,8 +34,14 @@ export default function GameCarousel() {
         <div className="home-games-scroll" ref={scrollRef}>
           {games.map((game) => (
             <article key={game.id} className="home-game-card">
-              <div className="home-game-icon-wrap" aria-hidden="true">
-                <GameCardIcon gameId={game.id} />
+              <div className="home-game-image-wrap">
+                <img
+                  className="home-game-image"
+                  src={game.image}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                />
               </div>
               <h3>{game.title}</h3>
               <p>{game.shortIntro}</p>

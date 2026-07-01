@@ -136,14 +136,36 @@
 }
 
 .werewolf-identity-card {
-  padding: 2.5rem 1.5rem;
-  background:
-    radial-gradient(ellipse at center, rgba(30, 58, 138, 0.2) 0%, transparent 70%),
-    var(--bg-card);
+  position: relative;
+  padding: 0;
+  background-image: url('/illustrations/werewolf-panel.png');
+  background-size: cover;
+  background-position: center;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   text-align: center;
-  min-height: 180px;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.werewolf-identity-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 8, 18, 0.55) 0%,
+    rgba(5, 8, 18, 0.72) 50%,
+    rgba(5, 8, 18, 0.82) 100%
+  );
+  pointer-events: none;
+}
+
+.werewolf-identity-overlay {
+  position: relative;
+  z-index: 1;
+  min-height: 200px;
+  padding: 2.5rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -162,21 +184,24 @@
 
 .werewolf-identity-label {
   font-size: 0.8rem;
-  color: var(--text-muted);
+  color: rgba(242, 244, 250, 0.75);
   text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .werewolf-identity-value {
   font-size: 2rem;
   font-weight: 800;
-  color: var(--purple-light);
+  color: #e9d5ff;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
 }
 
 .werewolf-identity-value.waiting {
   font-size: 1.1rem;
   font-weight: 500;
-  color: var(--text-secondary);
+  color: rgba(242, 244, 250, 0.9);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
 }
 
 .werewolf-actions {

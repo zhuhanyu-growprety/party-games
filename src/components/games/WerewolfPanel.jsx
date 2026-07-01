@@ -46,20 +46,18 @@ export default function WerewolfPanel() {
       </div>
 
       <div className="werewolf-identity-card">
-        {identity ? (
-          <>
-            <div className="werewolf-identity-icon" aria-hidden="true">🎭</div>
-            <div className="werewolf-identity-label">你的身份</div>
-            <div className="werewolf-identity-value">{identity}</div>
-          </>
-        ) : (
-          <>
-            <div className="werewolf-identity-icon waiting" aria-hidden="true">🌙</div>
+        <div className="werewolf-identity-overlay">
+          {identity ? (
+            <>
+              <div className="werewolf-identity-label">你的身份</div>
+              <div className="werewolf-identity-value">{identity}</div>
+            </>
+          ) : (
             <div className="werewolf-identity-value waiting">
               请等待房主开始本轮发牌
             </div>
-          </>
-        )}
+          )}
+        </div>
       </div>
 
       <div className="werewolf-actions">

@@ -25,9 +25,11 @@ export default function PlayerList({ players, maxPlayers = 12 }) {
         ))}
       </ul>
       <div className="player-list-deco" aria-hidden="true">
-        <span>🧑‍🤝‍🧑</span>
-        <span>🎊</span>
-        <span>🍻</span>
+        <img
+          className="player-list-deco-image"
+          src="/illustrations/room-side.png"
+          alt=""
+        />
       </div>
     </div>
   );

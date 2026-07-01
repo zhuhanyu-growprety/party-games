@@ -221,14 +221,22 @@
 }
 
 .player-list-deco {
-  margin-top: 1.5rem;
-  padding: 1rem;
-  text-align: center;
-  font-size: 1.5rem;
-  opacity: 0.4;
+  margin-top: 1.25rem;
+  padding: 0.5rem 0;
   display: flex;
   justify-content: center;
-  gap: 0.75rem;
+  align-items: center;
+}
+
+.player-list-deco-image {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  max-height: 140px;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.92;
+  filter: drop-shadow(0 8px 24px rgba(124, 58, 237, 0.12));
 }
 
 /* Game list (right sidebar) */
