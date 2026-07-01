@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Home, LogIn } from 'lucide-react';
 import { getNickname, setNickname, setRoomRole, setCreatedRoomCode } from '../lib/storage';
 import { generateRoomCode, normalizeRoomCode, isValidRoomCode } from '../lib/room';
 import HomeNav from '../components/home/HomeNav';
 import FeatureCards from '../components/home/FeatureCards';
 import GameCarousel from '../components/home/GameCarousel';
+import PartyLineArt from '../components/home/PartyLineArt';
 import '../styles/home.css';
 
 export default function PartyHomePage() {
@@ -50,6 +52,13 @@ export default function PartyHomePage() {
 
   return (
     <div className="home-page">
+      <div className="home-bg" aria-hidden="true">
+        <div className="home-bg-glow home-bg-glow--purple" />
+        <div className="home-bg-glow home-bg-glow--blue" />
+        <div className="home-bg-glow home-bg-glow--pink" />
+        <div className="home-bg-stars" />
+      </div>
+
       <HomeNav />
 
       <main className="home-main">
@@ -62,18 +71,12 @@ export default function PartyHomePage() {
               手机负责发身份、发词、抽题和阶段提示，真正的讨论与投票留在现场。
             </p>
           </div>
-          <div className="home-hero-illustration" aria-hidden="true">
-            <div className="home-illust-scene">
-              <span>🧑</span>
-              <span>👩</span>
-              <span>🧑‍🦱</span>
-              <span>👨</span>
-              <div className="home-illust-phone">📱</div>
-            </div>
+          <div className="home-hero-illustration">
+            <PartyLineArt />
           </div>
         </section>
 
-        <section className="home-action-bar card">
+        <section className="home-action-bar">
           <div className="home-action-group">
             <label htmlFor="nickname">昵称</label>
             <input
@@ -88,7 +91,7 @@ export default function PartyHomePage() {
           </div>
 
           <button type="button" className="btn btn-primary home-btn-create" onClick={handleCreate}>
-            <span aria-hidden="true">🏠</span>
+            <Home size={18} strokeWidth={2} aria-hidden="true" />
             创建房间
           </button>
 
@@ -107,7 +110,7 @@ export default function PartyHomePage() {
           </div>
 
           <button type="button" className="btn btn-blue home-btn-join" onClick={handleJoin}>
-            <span aria-hidden="true">→</span>
+            <LogIn size={18} strokeWidth={2} aria-hidden="true" />
             加入房间
           </button>
 
