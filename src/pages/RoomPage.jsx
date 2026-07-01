@@ -1,6 +1,7 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { getNickname, getRoomRole, getCreatedRoomCode } from '../lib/storage';
+import { ensureCurrentPlayerInRoom } from '../lib/roomPlayers';
 import { getAllGames, getGameById } from '../lib/games';
 import RoomHeader from '../components/room/RoomHeader';
 import PlayerList from '../components/room/PlayerList';
@@ -9,13 +10,6 @@ import RulesSummary from '../components/room/RulesSummary';
 import GamePanel from '../components/GamePanel';
 import '../styles/room.css';
 import '../styles/game-panel.css';
-
-const MOCK_PLAYERS = [
-  { id: 1, name: '成员1', isHost: true },
-  { id: 2, name: '成员2', isHost: false },
-  { id: 3, name: '成员3', isHost: false },
-  { id: 4, name: '成员4', isHost: false },
-];
 
 export default function RoomPage() {
   const { code } = useParams();
@@ -29,9 +23,17 @@ export default function RoomPage() {
   const [selectedGameId, setSelectedGameId] = useState('werewolf');
   const selectedGame = getGameById(selectedGameId);
 
-  const players = MOCK_PLAYERS.map((p) =>
-    p.id === 1 && nickname ? { ...p, name: nickname } : p,
-  );
+  const [players, setPlayers] = useState([]);
+
+  useEffect(() => {
+    if (!code) {
+      setPlayers([]);
+      return;
+    }
+    setPlayers(ensureCurrentPlayerInRoom(code, nickname, isHost));
+  }, [code, nickname, isHost]);
+
+  const displayNickname = nickname.trim() || '临时玩家';
 
   function handleCopy() {
     navigator.clipboard?.writeText(code).catch(() => {});
@@ -63,7 +65,7 @@ export default function RoomPage() {
 
       <RoomHeader
         code={code}
-        nickname={nickname}
+        nickname={displayNickname}
         isHost={isHost}
         onCopy={handleCopy}
         onInvite={handleInvite}
