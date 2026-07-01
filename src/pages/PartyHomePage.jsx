@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Home, LogIn } from 'lucide-react';
+import { Home, LogIn, Smile, ScanLine } from 'lucide-react';
 import { getNickname, setNickname, setRoomRole, setCreatedRoomCode } from '../lib/storage';
 import { generateRoomCode, normalizeRoomCode, isValidRoomCode } from '../lib/room';
 import HomeNav from '../components/home/HomeNav';
 import FeatureCards from '../components/home/FeatureCards';
 import GameCarousel from '../components/home/GameCarousel';
-import PartyLineArt from '../components/home/PartyLineArt';
+import HeroIllustration from '../components/home/HeroIllustration';
 import '../styles/home.css';
 
 export default function PartyHomePage() {
@@ -65,29 +65,33 @@ export default function PartyHomePage() {
         <section className="home-hero">
           <div className="home-hero-text">
             <h1 className="home-title">聚会游戏合集</h1>
-            <p className="home-subtitle">不带卡牌，也能轻松开玩</p>
-            <p className="home-desc">
-              面向朋友聚会、宿舍夜聊、生日局、轰趴和破冰场景的线下游戏房间工具。
-              手机负责发身份、发词、抽题和阶段提示，真正的讨论与投票留在现场。
-            </p>
+            <p className="home-subtitle">不带卡牌也能快速开局的聚会游戏房间工具</p>
+            <div className="home-desc">
+              <p>面向朋友聚会、宿舍夜聊、生日局、轰趴和破冰场景。</p>
+              <p>手机负责发身份、发词、抽题和阶段提示。</p>
+              <p>真正的讨论与投票留在现场。</p>
+            </div>
           </div>
           <div className="home-hero-illustration">
-            <PartyLineArt />
+            <HeroIllustration />
           </div>
         </section>
 
         <section className="home-action-bar">
           <div className="home-action-group">
             <label htmlFor="nickname">昵称</label>
-            <input
-              id="nickname"
-              className="home-input"
-              type="text"
-              placeholder="请输入你的昵称"
-              value={nickname}
-              onChange={(e) => setNicknameInput(e.target.value)}
-              maxLength={20}
-            />
+            <div className="home-input-wrap">
+              <input
+                id="nickname"
+                className="home-input"
+                type="text"
+                placeholder="请输入你的昵称"
+                value={nickname}
+                onChange={(e) => setNicknameInput(e.target.value)}
+                maxLength={20}
+              />
+              <Smile size={16} strokeWidth={1.75} className="home-input-icon" aria-hidden="true" />
+            </div>
           </div>
 
           <button type="button" className="btn btn-primary home-btn-create" onClick={handleCreate}>
@@ -97,16 +101,19 @@ export default function PartyHomePage() {
 
           <div className="home-action-group">
             <label htmlFor="room-code">房间码</label>
-            <input
-              id="room-code"
-              className="home-input home-input-code"
-              type="text"
-              placeholder="输入房间码加入"
-              value={joinCode}
-              onChange={(e) => setJoinCode(e.target.value.toUpperCase().slice(0, 4))}
-              maxLength={4}
-              autoComplete="off"
-            />
+            <div className="home-input-wrap">
+              <input
+                id="room-code"
+                className="home-input home-input-code"
+                type="text"
+                placeholder="输入房间码加入"
+                value={joinCode}
+                onChange={(e) => setJoinCode(e.target.value.toUpperCase().slice(0, 4))}
+                maxLength={4}
+                autoComplete="off"
+              />
+              <ScanLine size={16} strokeWidth={1.75} className="home-input-icon" aria-hidden="true" />
+            </div>
           </div>
 
           <button type="button" className="btn btn-blue home-btn-join" onClick={handleJoin}>

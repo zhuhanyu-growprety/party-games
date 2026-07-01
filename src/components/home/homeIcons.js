@@ -1,34 +1,5 @@
-import {
-  Search,
-  Moon,
-  Crown,
-  Drama,
-  Trees,
-  Bomb,
-  Dices,
-  CircleHelp,
-  CircleDot,
-  Globe,
-  Layers,
-  KeyRound,
-  Users,
-  Sparkles,
-} from 'lucide-react';
+import { Cloud, Layers, QrCode, Users } from 'lucide-react';
 
-const GAME_ICON_MAP = {
-  undercover: Search,
-  werewolf: Moon,
-  king: Crown,
-  whoami: Drama,
-  garden: Trees,
-  bomb: Bomb,
-  'truth-dare': Dices,
-  'turtle-soup': CircleHelp,
-  wheel: CircleDot,
-};
+export const FEATURE_ICONS = [Cloud, Layers, QrCode, Users];
 
-export function getHomeGameIcon(id) {
-  return GAME_ICON_MAP[id] ?? Sparkles;
-}
-
-export const FEATURE_ICONS = [Globe, Layers, KeyRound, Users];
+export const FEATURE_ACCENTS = ['blue', 'purple', 'violet', 'gold'];

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Users } from 'lucide-react';
+import { Users, BookOpen, Lightbulb } from 'lucide-react';
 
 export default function HomeNav() {
   return (
@@ -11,8 +11,14 @@ export default function HomeNav() {
         <span>聚会游戏合集</span>
       </Link>
       <nav className="home-nav-links">
-        <Link to="/games">玩法介绍</Link>
-        <Link to="/about">使用小贴士</Link>
+        <Link to="/games">
+          <BookOpen size={16} strokeWidth={1.75} aria-hidden="true" />
+          玩法介绍
+        </Link>
+        <Link to="/about">
+          <Lightbulb size={16} strokeWidth={1.75} aria-hidden="true" />
+          使用小贴士
+        </Link>
       </nav>
     </header>
   );

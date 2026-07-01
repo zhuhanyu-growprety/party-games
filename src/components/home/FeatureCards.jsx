@@ -1,4 +1,4 @@
-import { FEATURE_ICONS } from './homeIcons';
+import { FEATURE_ICONS, FEATURE_ACCENTS } from './homeIcons';
 
 const FEATURES = [
   { title: '打开网页就能玩', desc: '无需下载，浏览器直接开局' },
@@ -12,13 +12,16 @@ export default function FeatureCards() {
     <section className="home-features">
       {FEATURES.map((item, index) => {
         const Icon = FEATURE_ICONS[index];
+        const accent = FEATURE_ACCENTS[index];
         return (
-          <article key={item.title} className="home-feature-card">
+          <article key={item.title} className={`home-feature-card home-feature-card--${accent}`}>
             <span className="home-feature-icon" aria-hidden="true">
               <Icon size={22} strokeWidth={1.75} />
             </span>
-            <h3>{item.title}</h3>
-            <p>{item.desc}</p>
+            <div className="home-feature-body">
+              <h3>{item.title}</h3>
+              <p>{item.desc}</p>
+            </div>
           </article>
         );
       })}
