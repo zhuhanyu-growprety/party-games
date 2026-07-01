@@ -1,5 +1,3 @@
-import { getGameIcon } from '../../lib/games';
-
 export default function GameList({ games, selectedId, onSelect }) {
   return (
     <div className="game-list-wrap">
@@ -12,8 +10,12 @@ export default function GameList({ games, selectedId, onSelect }) {
               className={`game-list-item${selectedId === game.id ? ' active' : ''}`}
               onClick={() => onSelect(game.id)}
             >
-              <span className="game-list-icon" aria-hidden="true">
-                {getGameIcon(game.id)}
+              <span className="game-list-thumb-wrap" aria-hidden="true">
+                <img
+                  className="game-list-thumb"
+                  src={game.image}
+                  alt=""
+                />
               </span>
               <span className="game-list-name">{game.title}</span>
               {selectedId === game.id && (

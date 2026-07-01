@@ -55,6 +55,12 @@ export default function RoomPage() {
 
   return (
     <div className="room-page">
+      <div className="room-bg" aria-hidden="true">
+        <div className="room-bg-glow room-bg-glow--purple" />
+        <div className="room-bg-glow room-bg-glow--blue" />
+        <div className="room-bg-stars" />
+      </div>
+
       <RoomHeader
         code={code}
         nickname={nickname}

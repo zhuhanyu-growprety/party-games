@@ -11,7 +11,14 @@ export default function PlaceholderPanel({ game }) {
       </div>
 
       <div className="game-panel-placeholder card">
-        <div className="placeholder-icon" aria-hidden="true">🚧</div>
+        {game.image && (
+          <img
+            className="placeholder-thumb"
+            src={game.image}
+            alt=""
+            aria-hidden="true"
+          />
+        )}
         <p className="placeholder-status">该游戏面板正在建设中</p>
         <p className="placeholder-hint">{hint}</p>
         <span className="placeholder-range">{game.playerRange}</span>

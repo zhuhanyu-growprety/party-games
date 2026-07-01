@@ -1,5 +1,5 @@
 .game-panel {
-  max-width: 720px;
+  max-width: 760px;
   margin: 0 auto;
 }
 
@@ -10,11 +10,11 @@
 }
 
 .game-panel-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
 }
 
 .game-panel-header h2 {
-  font-size: 1.4rem;
+  font-size: 1.45rem;
   font-weight: 700;
   margin-bottom: 0.35rem;
 }
@@ -28,11 +28,17 @@
 .placeholder-panel .game-panel-placeholder {
   padding: 2rem 1.5rem;
   text-align: center;
+  background: rgba(10, 14, 26, 0.55) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
 }
 
-.placeholder-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.75rem;
+.placeholder-thumb {
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  margin: 0 auto 0.85rem;
+  display: block;
+  border-radius: 12px;
 }
 
 .placeholder-status {
@@ -60,79 +66,102 @@
 .werewolf-panel {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
-.werewolf-panel .game-panel-header {
+.werewolf-panel-header {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  text-align: center;
+  gap: 0.65rem;
+  margin-bottom: 0.25rem;
 }
 
-.werewolf-header-icon {
-  font-size: 2rem;
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-sm);
+.werewolf-header-thumb {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: 12px;
+  background: rgba(10, 14, 26, 0.6);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  padding: 4px;
+  filter: drop-shadow(0 0 12px rgba(124, 58, 237, 0.25));
+}
+
+.werewolf-panel-header h2 {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #ede9fe, #c4b5fd, #e879f9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .phase-stepper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  padding: 1rem 1.15rem;
+  background: rgba(10, 14, 26, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .phase-step {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.45rem;
   flex: 1;
   position: relative;
 }
 
 .phase-step-dot {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-radius: 50%;
-  background: var(--border-bright);
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.15);
   flex-shrink: 0;
-  transition: background 0.2s, box-shadow 0.2s;
+  transition: background 0.2s, box-shadow 0.2s, border-color 0.2s;
 }
 
 .phase-step.active .phase-step-dot {
-  background: var(--purple);
-  box-shadow: 0 0 8px rgba(124, 58, 237, 0.6);
+  background: #7c3aed;
+  border-color: #a78bfa;
+  box-shadow: 0 0 14px rgba(124, 58, 237, 0.7);
 }
 
 .phase-step.done .phase-step-dot {
-  background: var(--purple-light);
+  background: #a78bfa;
+  border-color: #c4b5fd;
 }
 
 .phase-step-label {
-  font-size: 0.75rem;
+  font-size: 0.78rem;
   color: var(--text-muted);
   white-space: nowrap;
 }
 
 .phase-step.active .phase-step-label {
-  color: var(--purple-light);
-  font-weight: 600;
+  color: #e9d5ff;
+  font-weight: 700;
+}
+
+.phase-step.done .phase-step-label {
+  color: var(--text-secondary);
 }
 
 .phase-step-line {
   flex: 1;
   height: 2px;
-  background: var(--border);
-  margin: 0 0.35rem;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 0 0.4rem;
+  border-radius: 1px;
+}
+
+.phase-step.done .phase-step-line {
+  background: linear-gradient(90deg, rgba(124, 58, 237, 0.45), rgba(167, 139, 250, 0.2));
 }
 
 .werewolf-identity-card {
@@ -141,11 +170,14 @@
   background-image: url('/illustrations/werewolf-panel.png');
   background-size: cover;
   background-position: center;
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  border: 1px solid rgba(167, 139, 250, 0.3);
+  border-radius: 16px;
   text-align: center;
-  min-height: 200px;
+  min-height: 220px;
   overflow: hidden;
+  box-shadow:
+    0 0 40px rgba(124, 58, 237, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 .werewolf-identity-card::before {
@@ -154,9 +186,9 @@
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(5, 8, 18, 0.55) 0%,
-    rgba(5, 8, 18, 0.72) 50%,
-    rgba(5, 8, 18, 0.82) 100%
+    rgba(5, 8, 18, 0.45) 0%,
+    rgba(5, 8, 18, 0.62) 45%,
+    rgba(5, 8, 18, 0.75) 100%
   );
   pointer-events: none;
 }
@@ -164,62 +196,98 @@
 .werewolf-identity-overlay {
   position: relative;
   z-index: 1;
-  min-height: 200px;
-  padding: 2.5rem 1.5rem;
+  min-height: 220px;
+  padding: 2.75rem 1.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-}
-
-.werewolf-identity-icon {
-  font-size: 2.5rem;
-  margin-bottom: 0.25rem;
-}
-
-.werewolf-identity-icon.waiting {
-  opacity: 0.6;
+  gap: 0.55rem;
 }
 
 .werewolf-identity-label {
-  font-size: 0.8rem;
-  color: rgba(242, 244, 250, 0.75);
+  font-size: 0.82rem;
+  color: rgba(242, 244, 250, 0.8);
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.1em;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.7);
 }
 
 .werewolf-identity-value {
-  font-size: 2rem;
-  font-weight: 800;
-  color: #e9d5ff;
-  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #f3e8ff;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.75);
+  letter-spacing: 0.06em;
 }
 
 .werewolf-identity-value.waiting {
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 500;
-  color: rgba(242, 244, 250, 0.9);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.65);
+  color: rgba(242, 244, 250, 0.92);
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0;
+  max-width: 280px;
+  line-height: 1.5;
 }
 
 .werewolf-actions {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
+  gap: 0.65rem;
 }
 
 .werewolf-actions .btn {
-  padding: 0.7rem 0.5rem;
-  font-size: 0.85rem;
+  padding: 0.85rem 0.5rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: opacity 0.15s, box-shadow 0.15s, transform 0.1s;
+}
+
+.werewolf-actions .btn:hover {
+  opacity: 0.95;
+  transform: translateY(-1px);
+}
+
+.werewolf-btn-deal {
+  background: linear-gradient(135deg, #ec4899, #a855f7, #7c3aed);
+  box-shadow: 0 4px 20px rgba(168, 85, 247, 0.3);
+}
+
+.werewolf-btn-deal:hover {
+  box-shadow: 0 6px 28px rgba(168, 85, 247, 0.4);
+}
+
+.werewolf-actions .btn-night {
+  box-shadow: 0 4px 16px rgba(30, 58, 138, 0.35);
+}
+
+.werewolf-actions .btn-night:hover {
+  box-shadow: 0 6px 24px rgba(30, 58, 138, 0.45);
+}
+
+.werewolf-actions .btn-day {
+  box-shadow: 0 4px 16px rgba(194, 65, 12, 0.3);
+}
+
+.werewolf-actions .btn-day:hover {
+  box-shadow: 0 6px 24px rgba(194, 65, 12, 0.4);
+}
+
+.werewolf-actions .btn-vote {
+  box-shadow: 0 4px 16px rgba(21, 128, 61, 0.3);
+}
+
+.werewolf-actions .btn-vote:hover {
+  box-shadow: 0 6px 24px rgba(21, 128, 61, 0.4);
 }
 
 .werewolf-rules {
   padding: 1rem 1.25rem;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background: rgba(10, 14, 26, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
 }
 
 .werewolf-rules h4 {
@@ -272,5 +340,9 @@
 
   .werewolf-actions {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .werewolf-identity-value {
+    font-size: 2rem;
   }
 }

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Info } from 'lucide-react';
 
 const ROLES = ['狼人', '村民', '预言家', '女巫', '猎人'];
 
@@ -24,8 +25,13 @@ export default function WerewolfPanel() {
 
   return (
     <div className="game-panel werewolf-panel">
-      <div className="game-panel-header">
-        <div className="werewolf-header-icon" aria-hidden="true">🐺</div>
+      <div className="game-panel-header werewolf-panel-header">
+        <img
+          className="werewolf-header-thumb"
+          src="/illustrations/game-werewolf.png"
+          alt=""
+          aria-hidden="true"
+        />
         <div>
           <h2>狼人杀开局助手</h2>
           <p>手机负责开局和流程，真正的博弈留在桌上</p>
@@ -61,7 +67,7 @@ export default function WerewolfPanel() {
       </div>
 
       <div className="werewolf-actions">
-        <button type="button" className="btn btn-primary" onClick={handleDeal}>
+        <button type="button" className="btn btn-primary werewolf-btn-deal" onClick={handleDeal}>
           开始发牌
         </button>
         <button type="button" className="btn btn-night" onClick={() => setPhase('night')}>
@@ -85,7 +91,7 @@ export default function WerewolfPanel() {
       </div>
 
       <p className="werewolf-footer-tip">
-        <span aria-hidden="true">ℹ️</span>
+        <Info size={14} strokeWidth={1.75} aria-hidden="true" />
         本站只辅助开局与流程，博弈与淘汰请在现场完成
       </p>
     </div>
