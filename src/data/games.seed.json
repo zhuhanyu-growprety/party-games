@@ -1,5 +1,27 @@
 [
   {
+    "id": "werewolf",
+    "title": "狼人杀",
+    "slug": "werewolf",
+    "shortIntro": "经典身份局，手机发牌，桌上博弈",
+    "playerRange": "6-12人",
+    "image": "/illustrations/game-werewolf.png",
+    "type": "identity",
+    "roomFriendly": true,
+    "status": "active"
+  },
+  {
+    "id": "truth-dare",
+    "title": "真心话大冒险",
+    "slug": "truth-dare",
+    "shortIntro": "随机抽取真心话或大冒险挑战",
+    "playerRange": "2-12人",
+    "image": "/illustrations/game-truth.png",
+    "type": "party",
+    "roomFriendly": true,
+    "status": "placeholder"
+  },
+  {
     "id": "undercover",
     "title": "谁是卧底",
     "slug": "undercover",
@@ -11,15 +33,15 @@
     "status": "placeholder"
   },
   {
-    "id": "werewolf",
-    "title": "狼人杀",
-    "slug": "werewolf",
-    "shortIntro": "经典身份局，手机发牌，桌上博弈",
-    "playerRange": "6-12人",
-    "image": "/illustrations/game-werewolf.png",
-    "type": "identity",
+    "id": "turtle-soup",
+    "title": "海龟汤",
+    "slug": "turtle-soup",
+    "shortIntro": "主持人给出汤面，大家提问还原故事",
+    "playerRange": "3-10人",
+    "image": "/illustrations/game-soup.png",
+    "type": "story",
     "roomFriendly": true,
-    "status": "active"
+    "status": "placeholder"
   },
   {
     "id": "king",
@@ -62,28 +84,6 @@
     "playerRange": "2-8人",
     "image": "/illustrations/game-bomb.png",
     "type": "number",
-    "roomFriendly": true,
-    "status": "placeholder"
-  },
-  {
-    "id": "truth-dare",
-    "title": "真心话大冒险",
-    "slug": "truth-dare",
-    "shortIntro": "随机抽取真心话或大冒险挑战",
-    "playerRange": "2-12人",
-    "image": "/illustrations/game-truth.png",
-    "type": "party",
-    "roomFriendly": true,
-    "status": "placeholder"
-  },
-  {
-    "id": "turtle-soup",
-    "title": "海龟汤",
-    "slug": "turtle-soup",
-    "shortIntro": "主持人给出汤面，大家提问还原故事",
-    "playerRange": "3-10人",
-    "image": "/illustrations/game-soup.png",
-    "type": "story",
     "roomFriendly": true,
     "status": "placeholder"
   },
