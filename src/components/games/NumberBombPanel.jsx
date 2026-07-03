@@ -6,11 +6,14 @@ const RANGE_MAX = 100;
 const MAX_GUESS_HISTORY = 8;
 
 const BOMB_PLAY_RULES = [
-  '手机在 1–100 之间随机生成隐藏炸弹数字，答案不会提前显示。',
-  '玩家轮流输入猜测，手机提示比隐藏数字大、小，或是否踩中。',
-  '每次猜测后安全范围不断缩小，直到有人猜中隐藏数字。',
-  '猜中隐藏数字的人踩中炸弹，本轮结束，可重新开始。',
+  '手机随机藏好一个 1–100 之间的炸弹数字，开局不告诉你。',
+  '玩家轮流输入猜测，手机只会提示偏大还是偏小。',
+  '每次猜测后炸弹所在区间不断缩小。',
+  '谁猜中那个隐藏数字，谁就踩中炸弹。',
 ];
+
+const BOMB_SAFETY_NOTE =
+  '踩中炸弹后完成一个提前约定的轻量挑战：好笑可以，危险和冒犯不行。';
 
 function randomBomb() {
   return Math.floor(Math.random() * (RANGE_MAX - RANGE_MIN + 1)) + RANGE_MIN;
@@ -25,6 +28,30 @@ function createRound() {
     gameOver: false,
     message: '',
   };
+}
+
+function formatRange(min, max) {
+  if (min === max) return `只剩最后一个数字：${min}`;
+  return `${min} – ${max}`;
+}
+
+function formatPlaceholder(min, max) {
+  if (min === max) return `输入最后的数字 ${min}`;
+  return `输入 ${min}–${max} 之间的数字`;
+}
+
+function buildTooSmallMessage(guess, newMin, max) {
+  if (newMin === max) {
+    return `${guess} 偏小，只剩 ${newMin} 了。下一位要小心。`;
+  }
+  return `${guess} 偏小，炸弹在 ${newMin}–${max} 之间。`;
+}
+
+function buildTooLargeMessage(guess, min, newMax) {
+  if (min === newMax) {
+    return `${guess} 偏大，只剩 ${newMax} 了。下一位要小心。`;
+  }
+  return `${guess} 偏大，炸弹在 ${min}–${newMax} 之间。`;
 }
 
 export default function NumberBombPanel({ game }) {
@@ -55,7 +82,7 @@ export default function NumberBombPanel({ game }) {
     if (guess < round.min || guess > round.max) {
       setRound((prev) => ({
         ...prev,
-        message: `请输入当前范围内的数字（${prev.min} - ${prev.max}）。`,
+        message: `请输入炸弹所在区间内的数字（${formatRange(prev.min, prev.max)}）。`,
       }));
       return;
     }
@@ -65,25 +92,27 @@ export default function NumberBombPanel({ game }) {
         ...prev,
         guesses: [guess, ...prev.guesses].slice(0, MAX_GUESS_HISTORY),
         gameOver: true,
-        message: `${guess} 正好是隐藏炸弹数字，炸弹引爆，本轮结束。`,
+        message: `${guess} 踩中炸弹，本轮结束！`,
       }));
       setInput('');
       return;
     }
 
     if (guess < round.bomb) {
+      const newMin = guess + 1;
       setRound((prev) => ({
         ...prev,
-        min: guess + 1,
+        min: newMin,
         guesses: [guess, ...prev.guesses].slice(0, MAX_GUESS_HISTORY),
-        message: `${guess} 比隐藏数字小，新范围：${guess + 1} – ${prev.max}`,
+        message: buildTooSmallMessage(guess, newMin, prev.max),
       }));
     } else {
+      const newMax = guess - 1;
       setRound((prev) => ({
         ...prev,
-        max: guess - 1,
+        max: newMax,
         guesses: [guess, ...prev.guesses].slice(0, MAX_GUESS_HISTORY),
-        message: `${guess} 比隐藏数字大，新范围：${prev.min} – ${guess - 1}`,
+        message: buildTooLargeMessage(guess, prev.min, newMax),
       }));
     }
     setInput('');
@@ -115,30 +144,30 @@ export default function NumberBombPanel({ game }) {
         </div>
       </div>
 
-      {rules && (
-        <div className="rules-panel-cards bomb-rules-compact">
-          <section className="rules-card">
-            <h3>怎么玩</h3>
-            <ul className="rules-card-list">
-              {BOMB_PLAY_RULES.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-          </section>
-        </div>
-      )}
+      <div className="rules-panel-cards bomb-rules-compact">
+        <section className="rules-card">
+          <h3>怎么玩</h3>
+          <ul className="rules-card-list">
+            {BOMB_PLAY_RULES.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+        </section>
+      </div>
 
       <section className="bomb-play">
         <h3 className="bomb-play-title">游戏区</h3>
 
         <p className="bomb-notice">
-          本轮已在 1–100 之间生成隐藏炸弹数字。答案不会显示，手机只负责判断大了、小了，或是否踩中炸弹。
+          手机已经藏好一个 1–100 之间的炸弹数字。
+          <br />
+          每次输入一个数字，手机只会提示偏大、偏小，猜中就引爆。
         </p>
 
         <div className={`bomb-range-card${round.gameOver ? ' bomb-range-card--over' : ''}`}>
-          <span className="bomb-range-label">安全猜测范围</span>
+          <span className="bomb-range-label">炸弹所在区间</span>
           <span className="bomb-range-value">
-            {round.min} - {round.max}
+            {formatRange(round.min, round.max)}
           </span>
         </div>
 
@@ -150,7 +179,7 @@ export default function NumberBombPanel({ game }) {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder={`输入 ${round.min}–${round.max} 之间的数字`}
+              placeholder={formatPlaceholder(round.min, round.max)}
               min={round.min}
               max={round.max}
               inputMode="numeric"
@@ -191,9 +220,7 @@ export default function NumberBombPanel({ game }) {
           </button>
         </div>
 
-        {rules?.safetyNote && (
-          <p className="bomb-safety">{rules.safetyNote}</p>
-        )}
+        <p className="bomb-safety">{BOMB_SAFETY_NOTE}</p>
       </section>
     </div>
   );
