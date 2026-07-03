@@ -1,4 +1,5 @@
 import { Info } from 'lucide-react';
+import { publicAsset } from '../../lib/assetPaths';
 
 const ROLES = ['狼人', '村民', '预言家', '女巫', '猎人'];
 
@@ -41,7 +42,7 @@ export default function WerewolfPanel({ session, onSessionChange }) {
       <div className="game-panel-header werewolf-panel-header">
         <img
           className="werewolf-header-thumb"
-          src="/illustrations/game-werewolf.png"
+          src={publicAsset('illustrations/game-werewolf.png')}
           alt=""
           aria-hidden="true"
         />
@@ -64,7 +65,10 @@ export default function WerewolfPanel({ session, onSessionChange }) {
         ))}
       </div>
 
-      <div className="werewolf-identity-card">
+      <div
+        className="werewolf-identity-card"
+        style={{ backgroundImage: `url(${publicAsset('illustrations/werewolf-panel.png')})` }}
+      >
         <div className="werewolf-identity-overlay">
           {identity ? (
             <>

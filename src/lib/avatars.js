@@ -1,10 +1,8 @@
-const base = import.meta.env.BASE_URL;
+import { publicAsset } from './assetPaths';
 
-function avatarPath(index) {
-  return `${base}avatars/avatar-${String(index).padStart(2, '0')}.png`;
-}
-
-export const AVATAR_POOL = Array.from({ length: 12 }, (_, i) => avatarPath(i + 1));
+export const AVATAR_POOL = Array.from({ length: 12 }, (_, i) =>
+  publicAsset(`avatars/avatar-${String(i + 1).padStart(2, '0')}.png`),
+);
 
 export function getPlayerAvatar(slot) {
   const index = (slot - 1) % AVATAR_POOL.length;

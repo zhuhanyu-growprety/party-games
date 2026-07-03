@@ -1,4 +1,5 @@
 import gamesData from '../data/games.seed.json';
+import { publicAsset } from './assetPaths';
 
 const GAME_ICONS = {
   undercover: '🕵️',
@@ -23,12 +24,19 @@ const PLACEHOLDER_HINTS = {
   wheel: '后续支持自定义选项并随机抽取。',
 };
 
+function resolveGameImage(game) {
+  if (!game?.image) return game;
+  const path = game.image.startsWith('/') ? game.image.slice(1) : game.image;
+  return { ...game, image: publicAsset(path) };
+}
+
 export function getAllGames() {
-  return gamesData;
+  return gamesData.map(resolveGameImage);
 }
 
 export function getGameById(id) {
-  return gamesData.find((g) => g.id === id) ?? null;
+  const game = gamesData.find((g) => g.id === id);
+  return game ? resolveGameImage(game) : null;
 }
 
 export function getGameIcon(id) {

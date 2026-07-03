@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Home, LogIn, Smile, ScanLine } from 'lucide-react';
 import { getNickname, setNickname, setRoomRole, setCreatedRoomCode } from '../lib/storage';
 import { generateRoomCode, normalizeRoomCode, isValidRoomCode } from '../lib/room';
+import { publicAsset } from '../lib/assetPaths';
 import HomeNav from '../components/home/HomeNav';
 import FeatureCards from '../components/home/FeatureCards';
 import GameCarousel from '../components/home/GameCarousel';
@@ -76,7 +77,7 @@ export default function PartyHomePage() {
               <div className="home-hero-image-frame">
                 <img
                   className="home-hero-image"
-                  src="/illustrations/home-hero.png"
+                  src={publicAsset('illustrations/home-hero.png')}
                   alt=""
                   aria-hidden="true"
                 />

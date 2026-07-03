@@ -1,4 +1,5 @@
 import { getPlayerAvatar } from '../../lib/avatars';
+import { publicAsset } from '../../lib/assetPaths';
 
 export default function PlayerList({ players, maxPlayers = 12 }) {
   return (
@@ -33,7 +34,7 @@ export default function PlayerList({ players, maxPlayers = 12 }) {
       <div className="player-list-deco" aria-hidden="true">
         <img
           className="player-list-deco-image"
-          src="/illustrations/room-side.png"
+          src={publicAsset('illustrations/room-side.png')}
           alt=""
         />
       </div>
