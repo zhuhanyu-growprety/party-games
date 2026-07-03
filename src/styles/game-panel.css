@@ -584,6 +584,17 @@
   margin: 0;
 }
 
+.bomb-notice {
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  background: rgba(239, 68, 68, 0.06);
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  border-radius: 8px;
+}
+
 .bomb-range-card {
   padding: 0.9rem 1rem;
   background: rgba(239, 68, 68, 0.08);
