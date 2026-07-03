@@ -1,0 +1,1005 @@
+{
+  "version": "who-am-i-v1",
+  "cards": [
+    {
+      "id": "who-001",
+      "text": "熊猫",
+      "category": "动物"
+    },
+    {
+      "id": "who-002",
+      "text": "企鹅",
+      "category": "动物"
+    },
+    {
+      "id": "who-003",
+      "text": "海豚",
+      "category": "动物"
+    },
+    {
+      "id": "who-004",
+      "text": "长颈鹿",
+      "category": "动物"
+    },
+    {
+      "id": "who-005",
+      "text": "考拉",
+      "category": "动物"
+    },
+    {
+      "id": "who-006",
+      "text": "松鼠",
+      "category": "动物"
+    },
+    {
+      "id": "who-007",
+      "text": "猫头鹰",
+      "category": "动物"
+    },
+    {
+      "id": "who-008",
+      "text": "乌龟",
+      "category": "动物"
+    },
+    {
+      "id": "who-009",
+      "text": "狐狸",
+      "category": "动物"
+    },
+    {
+      "id": "who-010",
+      "text": "兔子",
+      "category": "动物"
+    },
+    {
+      "id": "who-011",
+      "text": "金鱼",
+      "category": "动物"
+    },
+    {
+      "id": "who-012",
+      "text": "鹦鹉",
+      "category": "动物"
+    },
+    {
+      "id": "who-013",
+      "text": "刺猬",
+      "category": "动物"
+    },
+    {
+      "id": "who-014",
+      "text": "骆驼",
+      "category": "动物"
+    },
+    {
+      "id": "who-015",
+      "text": "海豹",
+      "category": "动物"
+    },
+    {
+      "id": "who-016",
+      "text": "老师",
+      "category": "职业"
+    },
+    {
+      "id": "who-017",
+      "text": "厨师",
+      "category": "职业"
+    },
+    {
+      "id": "who-018",
+      "text": "医生",
+      "category": "职业"
+    },
+    {
+      "id": "who-019",
+      "text": "司机",
+      "category": "职业"
+    },
+    {
+      "id": "who-020",
+      "text": "导游",
+      "category": "职业"
+    },
+    {
+      "id": "who-021",
+      "text": "摄影师",
+      "category": "职业"
+    },
+    {
+      "id": "who-022",
+      "text": "咖啡师",
+      "category": "职业"
+    },
+    {
+      "id": "who-023",
+      "text": "设计师",
+      "category": "职业"
+    },
+    {
+      "id": "who-024",
+      "text": "园丁",
+      "category": "职业"
+    },
+    {
+      "id": "who-025",
+      "text": "活动策划",
+      "category": "职业"
+    },
+    {
+      "id": "who-026",
+      "text": "配音演员",
+      "category": "职业"
+    },
+    {
+      "id": "who-027",
+      "text": "图书管理员",
+      "category": "职业"
+    },
+    {
+      "id": "who-028",
+      "text": "甜品师",
+      "category": "职业"
+    },
+    {
+      "id": "who-029",
+      "text": "理发师",
+      "category": "职业"
+    },
+    {
+      "id": "who-030",
+      "text": "快递员",
+      "category": "职业"
+    },
+    {
+      "id": "who-031",
+      "text": "水杯",
+      "category": "物品"
+    },
+    {
+      "id": "who-032",
+      "text": "雨伞",
+      "category": "物品"
+    },
+    {
+      "id": "who-033",
+      "text": "书包",
+      "category": "物品"
+    },
+    {
+      "id": "who-034",
+      "text": "钥匙",
+      "category": "物品"
+    },
+    {
+      "id": "who-035",
+      "text": "耳机",
+      "category": "物品"
+    },
+    {
+      "id": "who-036",
+      "text": "台灯",
+      "category": "物品"
+    },
+    {
+      "id": "who-037",
+      "text": "镜子",
+      "category": "物品"
+    },
+    {
+      "id": "who-038",
+      "text": "抱枕",
+      "category": "物品"
+    },
+    {
+      "id": "who-039",
+      "text": "闹钟",
+      "category": "物品"
+    },
+    {
+      "id": "who-040",
+      "text": "笔记本",
+      "category": "物品"
+    },
+    {
+      "id": "who-041",
+      "text": "拖鞋",
+      "category": "物品"
+    },
+    {
+      "id": "who-042",
+      "text": "行李箱",
+      "category": "物品"
+    },
+    {
+      "id": "who-043",
+      "text": "纸巾盒",
+      "category": "物品"
+    },
+    {
+      "id": "who-044",
+      "text": "充电线",
+      "category": "物品"
+    },
+    {
+      "id": "who-045",
+      "text": "书签",
+      "category": "物品"
+    },
+    {
+      "id": "who-046",
+      "text": "火锅",
+      "category": "食物"
+    },
+    {
+      "id": "who-047",
+      "text": "饺子",
+      "category": "食物"
+    },
+    {
+      "id": "who-048",
+      "text": "蛋挞",
+      "category": "食物"
+    },
+    {
+      "id": "who-049",
+      "text": "烤红薯",
+      "category": "食物"
+    },
+    {
+      "id": "who-050",
+      "text": "三明治",
+      "category": "食物"
+    },
+    {
+      "id": "who-051",
+      "text": "拉面",
+      "category": "食物"
+    },
+    {
+      "id": "who-052",
+      "text": "寿司",
+      "category": "食物"
+    },
+    {
+      "id": "who-053",
+      "text": "煎饼",
+      "category": "食物"
+    },
+    {
+      "id": "who-054",
+      "text": "冰淇淋",
+      "category": "食物"
+    },
+    {
+      "id": "who-055",
+      "text": "小笼包",
+      "category": "食物"
+    },
+    {
+      "id": "who-056",
+      "text": "麻辣烫",
+      "category": "食物"
+    },
+    {
+      "id": "who-057",
+      "text": "水果沙拉",
+      "category": "食物"
+    },
+    {
+      "id": "who-058",
+      "text": "爆米花",
+      "category": "食物"
+    },
+    {
+      "id": "who-059",
+      "text": "糖葫芦",
+      "category": "食物"
+    },
+    {
+      "id": "who-060",
+      "text": "番茄炒蛋",
+      "category": "食物"
+    },
+    {
+      "id": "who-061",
+      "text": "牛奶",
+      "category": "饮品"
+    },
+    {
+      "id": "who-062",
+      "text": "豆浆",
+      "category": "饮品"
+    },
+    {
+      "id": "who-063",
+      "text": "柠檬水",
+      "category": "饮品"
+    },
+    {
+      "id": "who-064",
+      "text": "热可可",
+      "category": "饮品"
+    },
+    {
+      "id": "who-065",
+      "text": "气泡水",
+      "category": "饮品"
+    },
+    {
+      "id": "who-066",
+      "text": "拿铁",
+      "category": "饮品"
+    },
+    {
+      "id": "who-067",
+      "text": "乌龙茶",
+      "category": "饮品"
+    },
+    {
+      "id": "who-068",
+      "text": "橙汁",
+      "category": "饮品"
+    },
+    {
+      "id": "who-069",
+      "text": "酸奶",
+      "category": "饮品"
+    },
+    {
+      "id": "who-070",
+      "text": "椰子水",
+      "category": "饮品"
+    },
+    {
+      "id": "who-071",
+      "text": "图书馆",
+      "category": "地点"
+    },
+    {
+      "id": "who-072",
+      "text": "便利店",
+      "category": "地点"
+    },
+    {
+      "id": "who-073",
+      "text": "电影院",
+      "category": "地点"
+    },
+    {
+      "id": "who-074",
+      "text": "咖啡馆",
+      "category": "地点"
+    },
+    {
+      "id": "who-075",
+      "text": "操场",
+      "category": "地点"
+    },
+    {
+      "id": "who-076",
+      "text": "食堂",
+      "category": "地点"
+    },
+    {
+      "id": "who-077",
+      "text": "公园",
+      "category": "地点"
+    },
+    {
+      "id": "who-078",
+      "text": "海边",
+      "category": "地点"
+    },
+    {
+      "id": "who-079",
+      "text": "车站",
+      "category": "地点"
+    },
+    {
+      "id": "who-080",
+      "text": "花店",
+      "category": "地点"
+    },
+    {
+      "id": "who-081",
+      "text": "博物馆",
+      "category": "地点"
+    },
+    {
+      "id": "who-082",
+      "text": "老街",
+      "category": "地点"
+    },
+    {
+      "id": "who-083",
+      "text": "夜市",
+      "category": "地点"
+    },
+    {
+      "id": "who-084",
+      "text": "阳台",
+      "category": "地点"
+    },
+    {
+      "id": "who-085",
+      "text": "自习室",
+      "category": "地点"
+    },
+    {
+      "id": "who-086",
+      "text": "时间旅行者",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-087",
+      "text": "星球向导",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-088",
+      "text": "云朵管理员",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-089",
+      "text": "快乐收藏家",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-090",
+      "text": "迷你侦探",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-091",
+      "text": "梦境邮差",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-092",
+      "text": "月光店长",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-093",
+      "text": "好运播报员",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-094",
+      "text": "森林翻译官",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-095",
+      "text": "天气魔法师",
+      "category": "虚构身份"
+    },
+    {
+      "id": "who-096",
+      "text": "夜宵队长",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-097",
+      "text": "气氛组",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-098",
+      "text": "路线规划师",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-099",
+      "text": "点子王",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-100",
+      "text": "安静观察员",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-101",
+      "text": "菜单研究员",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-102",
+      "text": "收纳高手",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-103",
+      "text": "聊天接球员",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-104",
+      "text": "冷笑话顾问",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-105",
+      "text": "快乐打卡员",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-106",
+      "text": "太阳",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-107",
+      "text": "月亮",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-108",
+      "text": "云朵",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-109",
+      "text": "彩虹",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-110",
+      "text": "雪花",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-111",
+      "text": "晚霞",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-112",
+      "text": "海浪",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-113",
+      "text": "森林",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-114",
+      "text": "星星",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-115",
+      "text": "山谷",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-116",
+      "text": "地铁",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-117",
+      "text": "公交车",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-118",
+      "text": "高铁",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-119",
+      "text": "自行车",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-120",
+      "text": "轮船",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-121",
+      "text": "飞机",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-122",
+      "text": "出租车",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-123",
+      "text": "观光车",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-124",
+      "text": "缆车",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-125",
+      "text": "滑板车",
+      "category": "交通工具"
+    },
+    {
+      "id": "who-126",
+      "text": "课代表",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-127",
+      "text": "社团新人",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-128",
+      "text": "食堂常客",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-129",
+      "text": "自习搭子",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-130",
+      "text": "运动会观众",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-131",
+      "text": "图书馆座位",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-132",
+      "text": "校园广播",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-133",
+      "text": "宿舍小台灯",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-134",
+      "text": "考试周咖啡",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-135",
+      "text": "操场晚风",
+      "category": "校园生活"
+    },
+    {
+      "id": "who-136",
+      "text": "主持人",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-137",
+      "text": "计分员",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-138",
+      "text": "出题人",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-139",
+      "text": "气氛设计师",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-140",
+      "text": "掌声管理员",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-141",
+      "text": "临时导演",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-142",
+      "text": "美食顾问",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-143",
+      "text": "故事接龙员",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-144",
+      "text": "夸夸代表",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-145",
+      "text": "节奏控制员",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-146",
+      "text": "篮球",
+      "category": "运动"
+    },
+    {
+      "id": "who-147",
+      "text": "足球",
+      "category": "运动"
+    },
+    {
+      "id": "who-148",
+      "text": "羽毛球",
+      "category": "运动"
+    },
+    {
+      "id": "who-149",
+      "text": "乒乓球",
+      "category": "运动"
+    },
+    {
+      "id": "who-150",
+      "text": "游泳",
+      "category": "运动"
+    },
+    {
+      "id": "who-151",
+      "text": "瑜伽",
+      "category": "运动"
+    },
+    {
+      "id": "who-152",
+      "text": "跑步",
+      "category": "运动"
+    },
+    {
+      "id": "who-153",
+      "text": "滑雪",
+      "category": "运动"
+    },
+    {
+      "id": "who-154",
+      "text": "骑行",
+      "category": "运动"
+    },
+    {
+      "id": "who-155",
+      "text": "跳绳",
+      "category": "运动"
+    },
+    {
+      "id": "who-156",
+      "text": "春节",
+      "category": "节日"
+    },
+    {
+      "id": "who-157",
+      "text": "中秋节",
+      "category": "节日"
+    },
+    {
+      "id": "who-158",
+      "text": "元旦",
+      "category": "节日"
+    },
+    {
+      "id": "who-159",
+      "text": "端午节",
+      "category": "节日"
+    },
+    {
+      "id": "who-160",
+      "text": "七夕",
+      "category": "节日"
+    },
+    {
+      "id": "who-161",
+      "text": "儿童节",
+      "category": "节日"
+    },
+    {
+      "id": "who-162",
+      "text": "生日",
+      "category": "节日"
+    },
+    {
+      "id": "who-163",
+      "text": "毕业季",
+      "category": "节日"
+    },
+    {
+      "id": "who-164",
+      "text": "跨年夜",
+      "category": "节日"
+    },
+    {
+      "id": "who-165",
+      "text": "灯会",
+      "category": "节日"
+    },
+    {
+      "id": "who-166",
+      "text": "晴天",
+      "category": "天气"
+    },
+    {
+      "id": "who-167",
+      "text": "小雨",
+      "category": "天气"
+    },
+    {
+      "id": "who-168",
+      "text": "多云",
+      "category": "天气"
+    },
+    {
+      "id": "who-169",
+      "text": "大风",
+      "category": "天气"
+    },
+    {
+      "id": "who-170",
+      "text": "雾天",
+      "category": "天气"
+    },
+    {
+      "id": "who-171",
+      "text": "雪天",
+      "category": "天气"
+    },
+    {
+      "id": "who-172",
+      "text": "彩虹天",
+      "category": "天气"
+    },
+    {
+      "id": "who-173",
+      "text": "午后阳光",
+      "category": "天气"
+    },
+    {
+      "id": "who-174",
+      "text": "清晨薄雾",
+      "category": "天气"
+    },
+    {
+      "id": "who-175",
+      "text": "傍晚微风",
+      "category": "天气"
+    },
+    {
+      "id": "who-176",
+      "text": "书店店主",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-177",
+      "text": "花店店员",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-178",
+      "text": "迷路游客",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-179",
+      "text": "热心邻桌",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-180",
+      "text": "桌游新手",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-181",
+      "text": "幸运观众",
+      "category": "聚会角色"
+    },
+    {
+      "id": "who-182",
+      "text": "灯光师",
+      "category": "职业"
+    },
+    {
+      "id": "who-183",
+      "text": "修理师",
+      "category": "职业"
+    },
+    {
+      "id": "who-184",
+      "text": "插画师",
+      "category": "职业"
+    },
+    {
+      "id": "who-185",
+      "text": "翻译员",
+      "category": "职业"
+    },
+    {
+      "id": "who-186",
+      "text": "烤面包机",
+      "category": "物品"
+    },
+    {
+      "id": "who-187",
+      "text": "小风扇",
+      "category": "物品"
+    },
+    {
+      "id": "who-188",
+      "text": "毛毯",
+      "category": "物品"
+    },
+    {
+      "id": "who-189",
+      "text": "便签纸",
+      "category": "物品"
+    },
+    {
+      "id": "who-190",
+      "text": "沙发",
+      "category": "物品"
+    },
+    {
+      "id": "who-191",
+      "text": "窗帘",
+      "category": "物品"
+    },
+    {
+      "id": "who-192",
+      "text": "电梯",
+      "category": "地点"
+    },
+    {
+      "id": "who-193",
+      "text": "天台",
+      "category": "地点"
+    },
+    {
+      "id": "who-194",
+      "text": "温泉",
+      "category": "地点"
+    },
+    {
+      "id": "who-195",
+      "text": "游乐园",
+      "category": "地点"
+    },
+    {
+      "id": "who-196",
+      "text": "公交站牌",
+      "category": "物品"
+    },
+    {
+      "id": "who-197",
+      "text": "手帐",
+      "category": "物品"
+    },
+    {
+      "id": "who-198",
+      "text": "旅行顾问",
+      "category": "日常角色"
+    },
+    {
+      "id": "who-199",
+      "text": "泡泡",
+      "category": "自然事物"
+    },
+    {
+      "id": "who-200",
+      "text": "滑梯",
+      "category": "地点"
+    }
+  ]
+}

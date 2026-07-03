@@ -1,0 +1,605 @@
+{
+  "version": "king-game-commands-v1",
+  "commands": [
+    {
+      "id": "king-001",
+      "text": "A号用天气预报语气描述自己当前状态。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-002",
+      "text": "A号给自己取一个今晚限定外号。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-003",
+      "text": "A号用播音腔说一句普通问候。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-004",
+      "text": "A号摆一个三秒钟的胜利姿势。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-005",
+      "text": "A号用客服语气回答“现在感觉怎么样”。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-006",
+      "text": "A号给今晚的聚会起一个标题。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-007",
+      "text": "A号模仿一种小动物的表情。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-008",
+      "text": "A号用电影预告片语气介绍自己。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-009",
+      "text": "A号说出三个形容今晚的词。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-010",
+      "text": "A号用非常正式的语气介绍桌上一样物品。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-011",
+      "text": "A号用手势表达“我有点开心”。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-012",
+      "text": "A号给大家编一句不超过十个字的口号。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-013",
+      "text": "A号用导游语气介绍自己座位附近的区域。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-014",
+      "text": "A号做一个“刚听到好消息”的表情。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-015",
+      "text": "A号用一句话推荐一种放松方式。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-016",
+      "text": "A号假装自己是电台主播，说一句夜间问候。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-017",
+      "text": "A号在十秒内说出五种水果。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-018",
+      "text": "A号用古装语气说一句“各位请继续”。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-019",
+      "text": "A号给自己的今日状态起一个菜名。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-020",
+      "text": "A号用侦探语气描述现场一个细节。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-021",
+      "text": "A号做一个“认真但差点笑场”的表情。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-022",
+      "text": "A号用广告语推荐坐着聊天这件事。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-023",
+      "text": "A号说出一个适合下次聚会的主题。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-024",
+      "text": "A号用机器人语气说一句祝福。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-025",
+      "text": "A号摆一个“正在接受采访”的姿势。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-026",
+      "text": "A号用一句话把今晚说成一部电影。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-027",
+      "text": "A号在十五秒内说出五种颜色。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-028",
+      "text": "A号用旁白语气描述自己接下来的动作。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-029",
+      "text": "A号给今天的自己选一个关键词。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-030",
+      "text": "A号模仿一只企鹅认真点头。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-031",
+      "text": "A号用主持人口吻宣布下一轮开始。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-032",
+      "text": "A号说一个让周末变舒服的小建议。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-033",
+      "text": "A号用三种语气说“我准备好了”。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-034",
+      "text": "A号给现场一个物品起一个人名。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-035",
+      "text": "A号用生活博主语气分享一个小妙招。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-036",
+      "text": "A号摆一个“主角出场”的姿势三秒。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-037",
+      "text": "A号用一句话给大家送祝福。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-038",
+      "text": "A号在十秒内说出三种适合聚会的音乐风格。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-039",
+      "text": "A号用严谨语气解释为什么聚会需要笑声。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-040",
+      "text": "A号给今晚设计一个虚构奖杯名称。",
+      "playersNeeded": 1
+    },
+    {
+      "id": "king-041",
+      "text": "A号用播音腔夸B号一句。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-042",
+      "text": "A号和B号各用一个词形容今晚。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-043",
+      "text": "A号给B号设计一个积极称号。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-044",
+      "text": "A号用客服语气回答B号一个普通问题。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-045",
+      "text": "A号和B号进行一局石头剪刀布，输赢都互夸一句。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-046",
+      "text": "A号用导演语气指导B号摆一个轻松表情。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-047",
+      "text": "A号和B号轮流说三种水果，不能重复。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-048",
+      "text": "A号给B号起一个今晚限定外号，要求友好好听。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-049",
+      "text": "A号用导游语气介绍B号的座位区域。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-050",
+      "text": "A号和B号各说一个适合聚会的食物。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-051",
+      "text": "A号用新闻主播语气采访B号今天的心情。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-052",
+      "text": "A号和B号一起编一句四字口号。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-053",
+      "text": "A号用侦探语气说出B号身上一个积极线索。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-054",
+      "text": "A号和B号轮流说三种动物，不能重复。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-055",
+      "text": "A号给B号颁一个轻松奖项。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-056",
+      "text": "A号用电影旁白语气介绍B号出场。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-057",
+      "text": "A号和B号各用一句话推荐一种休息方式。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-058",
+      "text": "A号问B号一个二选一轻松问题，B号必须快速回答。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-059",
+      "text": "A号和B号同时摆一个“很可靠”的姿势。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-060",
+      "text": "A号用广告口播推荐B号的一个优点。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-061",
+      "text": "A号和B号轮流说三种颜色，不能重复。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-062",
+      "text": "A号假装是主持人，请B号说一句开场白。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-063",
+      "text": "A号给B号一个关键词，B号用它造一句话。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-064",
+      "text": "A号和B号一起给今晚起一个副标题。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-065",
+      "text": "A号用机器人语气邀请B号继续游戏。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-066",
+      "text": "A号和B号各模仿一种天气的表情。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-067",
+      "text": "A号说一个物品，B号给它编一句广告词。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-068",
+      "text": "A号和B号轮流说三个城市，不能重复。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-069",
+      "text": "A号用温柔语气对B号说一句鼓励。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-070",
+      "text": "A号让B号选择一种音乐风格，并用一句话形容它。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-071",
+      "text": "A号和B号一起设计一个虚构组合名。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-072",
+      "text": "A号用电台主播语气把一句祝福送给B号。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-073",
+      "text": "A号和B号各说一种旅行会带的东西。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-074",
+      "text": "A号给B号安排一个正向的故事角色。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-075",
+      "text": "A号和B号一起做一个不接触的团队手势。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-076",
+      "text": "A号用餐厅服务员语气给B号推荐“快乐套餐”。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-077",
+      "text": "A号和B号各用一个表情表达“惊喜”。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-078",
+      "text": "A号说一句上半句，B号接一个轻松下半句。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-079",
+      "text": "A号用旁白语气总结B号刚才的表现。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-080",
+      "text": "A号和B号各说一个下次聚会想玩的主题。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-081",
+      "text": "A号给B号设计一句综艺出场字幕。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-082",
+      "text": "A号和B号轮流说三种饮品，不能重复。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-083",
+      "text": "A号用古代店小二语气欢迎B号入座。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-084",
+      "text": "A号请B号给今晚的气氛打一个虚构评分。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-085",
+      "text": "A号和B号各说一个让人开心的小事。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-086",
+      "text": "A号用一本正经的语气向B号解释如何正确发呆。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-087",
+      "text": "A号和B号一起给现场一个角落取名字。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-088",
+      "text": "A号用采访语气问B号一个关于美食的轻松问题。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-089",
+      "text": "A号给B号送一个不超过六个字的友好标签。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-090",
+      "text": "A号和B号各说一种适合周末的活动。",
+      "playersNeeded": 2
+    },
+    {
+      "id": "king-091",
+      "text": "A号、B号、C号一起给今晚起一个组合名。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-092",
+      "text": "A号、B号、C号各用一个词形容当前气氛。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-093",
+      "text": "A号问一个轻松二选一，B号和C号分别回答。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-094",
+      "text": "A号、B号、C号轮流说一种水果，不能重复。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-095",
+      "text": "A号给出一个物品，B号和C号分别为它编一句广告词。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-096",
+      "text": "A号、B号、C号各摆一个不接触的团队姿势。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-097",
+      "text": "A号用主持人口吻介绍B号和C号出场。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-098",
+      "text": "A号、B号、C号一起编一句不超过十字的队训。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-099",
+      "text": "A号说一个天气，B号和C号用表情演出来。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-100",
+      "text": "A号、B号、C号轮流说一种动物，不能重复。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-101",
+      "text": "A号给B号一个关键词，B号造句，C号点评一句。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-102",
+      "text": "A号、B号、C号各给今晚贡献一个虚构奖项。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-103",
+      "text": "A号用导演语气安排B号和C号做两个安全小表情。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-104",
+      "text": "A号、B号、C号轮流说一种饮品，不能重复。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-105",
+      "text": "A号说一个场景，B号和C号分别给它起标题。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-106",
+      "text": "A号、B号、C号各说一个适合聚会的小游戏。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-107",
+      "text": "A号采访B号，C号用旁白总结一句。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-108",
+      "text": "A号、B号、C号一起设计一个三秒开场口号。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-109",
+      "text": "A号说上半句，B号接下半句，C号给整句起名。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-110",
+      "text": "A号、B号、C号各用一种语气说“开始吧”。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-111",
+      "text": "A号给B号和C号分别送一个积极形容词。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-112",
+      "text": "A号、B号、C号轮流说一种颜色，不能重复。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-113",
+      "text": "A号假装新闻主播，B号和C号各补充一条快乐新闻。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-114",
+      "text": "A号、B号、C号一起给下次聚会定一个主题。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-115",
+      "text": "A号说一个旅行地类型，B号和C号各补一个会带的东西。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-116",
+      "text": "A号、B号、C号各用一句话推荐一种休息方式。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-117",
+      "text": "A号用客服语气接待B号，C号负责给服务打分。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-118",
+      "text": "A号、B号、C号一起给现场一个普通物品安排角色。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-119",
+      "text": "A号提出一个轻松问题，B号回答，C号用一个词总结。",
+      "playersNeeded": 3
+    },
+    {
+      "id": "king-120",
+      "text": "A号、B号、C号各做一个不同的开心表情。",
+      "playersNeeded": 3
+    }
+  ]
+}

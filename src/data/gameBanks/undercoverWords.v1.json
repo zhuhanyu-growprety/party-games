@@ -1,0 +1,1405 @@
+{
+  "version": "undercover-words-v1",
+  "wordPairs": [
+    {
+      "id": "undercover-001",
+      "civilianWord": "牛奶",
+      "undercoverWord": "豆浆",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-002",
+      "civilianWord": "火锅",
+      "undercoverWord": "麻辣烫",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-003",
+      "civilianWord": "猫",
+      "undercoverWord": "狗",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-004",
+      "civilianWord": "地铁",
+      "undercoverWord": "公交",
+      "difficulty": "easy",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-005",
+      "civilianWord": "老师",
+      "undercoverWord": "辅导员",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-006",
+      "civilianWord": "雨伞",
+      "undercoverWord": "雨衣",
+      "difficulty": "easy",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-007",
+      "civilianWord": "电影院",
+      "undercoverWord": "剧场",
+      "difficulty": "easy",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-008",
+      "civilianWord": "篮球",
+      "undercoverWord": "足球",
+      "difficulty": "easy",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-009",
+      "civilianWord": "酒店",
+      "undercoverWord": "民宿",
+      "difficulty": "easy",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-010",
+      "civilianWord": "晴天",
+      "undercoverWord": "多云",
+      "difficulty": "easy",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-011",
+      "civilianWord": "饺子",
+      "undercoverWord": "包子",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-012",
+      "civilianWord": "咖啡",
+      "undercoverWord": "奶茶",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-013",
+      "civilianWord": "熊猫",
+      "undercoverWord": "考拉",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-014",
+      "civilianWord": "司机",
+      "undercoverWord": "导游",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-015",
+      "civilianWord": "水杯",
+      "undercoverWord": "保温杯",
+      "difficulty": "easy",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-016",
+      "civilianWord": "图书馆",
+      "undercoverWord": "自习室",
+      "difficulty": "easy",
+      "category": "校园"
+    },
+    {
+      "id": "undercover-017",
+      "civilianWord": "火车",
+      "undercoverWord": "高铁",
+      "difficulty": "easy",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-018",
+      "civilianWord": "唱歌",
+      "undercoverWord": "跳舞",
+      "difficulty": "easy",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-019",
+      "civilianWord": "春节",
+      "undercoverWord": "中秋节",
+      "difficulty": "easy",
+      "category": "节日"
+    },
+    {
+      "id": "undercover-020",
+      "civilianWord": "开心",
+      "undercoverWord": "兴奋",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-021",
+      "civilianWord": "蛋糕",
+      "undercoverWord": "面包",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-022",
+      "civilianWord": "橙汁",
+      "undercoverWord": "苹果汁",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-023",
+      "civilianWord": "兔子",
+      "undercoverWord": "松鼠",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-024",
+      "civilianWord": "厨师",
+      "undercoverWord": "甜品师",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-025",
+      "civilianWord": "钥匙",
+      "undercoverWord": "门卡",
+      "difficulty": "easy",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-026",
+      "civilianWord": "食堂",
+      "undercoverWord": "餐厅",
+      "difficulty": "easy",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-027",
+      "civilianWord": "游泳",
+      "undercoverWord": "跑步",
+      "difficulty": "easy",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-028",
+      "civilianWord": "海边",
+      "undercoverWord": "湖边",
+      "difficulty": "easy",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-029",
+      "civilianWord": "小雨",
+      "undercoverWord": "大雨",
+      "difficulty": "easy",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-030",
+      "civilianWord": "紧张",
+      "undercoverWord": "期待",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-031",
+      "civilianWord": "炒饭",
+      "undercoverWord": "盖饭",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-032",
+      "civilianWord": "热可可",
+      "undercoverWord": "热牛奶",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-033",
+      "civilianWord": "企鹅",
+      "undercoverWord": "海豹",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-034",
+      "civilianWord": "摄影师",
+      "undercoverWord": "摄像师",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-035",
+      "civilianWord": "耳机",
+      "undercoverWord": "音箱",
+      "difficulty": "easy",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-036",
+      "civilianWord": "操场",
+      "undercoverWord": "体育馆",
+      "difficulty": "easy",
+      "category": "校园"
+    },
+    {
+      "id": "undercover-037",
+      "civilianWord": "飞机",
+      "undercoverWord": "轮船",
+      "difficulty": "easy",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-038",
+      "civilianWord": "桌游",
+      "undercoverWord": "扑克牌",
+      "difficulty": "easy",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-039",
+      "civilianWord": "元旦",
+      "undercoverWord": "跨年夜",
+      "difficulty": "easy",
+      "category": "节日"
+    },
+    {
+      "id": "undercover-040",
+      "civilianWord": "平静",
+      "undercoverWord": "放松",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-041",
+      "civilianWord": "寿司",
+      "undercoverWord": "饭团",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-042",
+      "civilianWord": "绿茶",
+      "undercoverWord": "乌龙茶",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-043",
+      "civilianWord": "鹦鹉",
+      "undercoverWord": "鸽子",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-044",
+      "civilianWord": "医生",
+      "undercoverWord": "护士",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-045",
+      "civilianWord": "书包",
+      "undercoverWord": "帆布包",
+      "difficulty": "easy",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-046",
+      "civilianWord": "公园",
+      "undercoverWord": "广场",
+      "difficulty": "easy",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-047",
+      "civilianWord": "羽毛球",
+      "undercoverWord": "乒乓球",
+      "difficulty": "easy",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-048",
+      "civilianWord": "古镇",
+      "undercoverWord": "老街",
+      "difficulty": "easy",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-049",
+      "civilianWord": "大风",
+      "undercoverWord": "微风",
+      "difficulty": "easy",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-050",
+      "civilianWord": "惊喜",
+      "undercoverWord": "好奇",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-051",
+      "civilianWord": "薯片",
+      "undercoverWord": "饼干",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-052",
+      "civilianWord": "柠檬水",
+      "undercoverWord": "气泡水",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-053",
+      "civilianWord": "乌龟",
+      "undercoverWord": "蜗牛",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-054",
+      "civilianWord": "设计师",
+      "undercoverWord": "插画师",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-055",
+      "civilianWord": "台灯",
+      "undercoverWord": "落地灯",
+      "difficulty": "easy",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-056",
+      "civilianWord": "宿舍",
+      "undercoverWord": "卧室",
+      "difficulty": "easy",
+      "category": "校园"
+    },
+    {
+      "id": "undercover-057",
+      "civilianWord": "自行车",
+      "undercoverWord": "电动车",
+      "difficulty": "easy",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-058",
+      "civilianWord": "电影",
+      "undercoverWord": "电视剧",
+      "difficulty": "easy",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-059",
+      "civilianWord": "端午节",
+      "undercoverWord": "清明节",
+      "difficulty": "easy",
+      "category": "节日"
+    },
+    {
+      "id": "undercover-060",
+      "civilianWord": "认真",
+      "undercoverWord": "专注",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-061",
+      "civilianWord": "拉面",
+      "undercoverWord": "米线",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-062",
+      "civilianWord": "酸奶",
+      "undercoverWord": "奶昔",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-063",
+      "civilianWord": "长颈鹿",
+      "undercoverWord": "斑马",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-064",
+      "civilianWord": "理发师",
+      "undercoverWord": "化妆师",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-065",
+      "civilianWord": "抱枕",
+      "undercoverWord": "靠垫",
+      "difficulty": "easy",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-066",
+      "civilianWord": "咖啡馆",
+      "undercoverWord": "茶馆",
+      "difficulty": "easy",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-067",
+      "civilianWord": "滑雪",
+      "undercoverWord": "滑冰",
+      "difficulty": "easy",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-068",
+      "civilianWord": "行李箱",
+      "undercoverWord": "背包",
+      "difficulty": "easy",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-069",
+      "civilianWord": "雾天",
+      "undercoverWord": "阴天",
+      "difficulty": "easy",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-070",
+      "civilianWord": "尴尬",
+      "undercoverWord": "害羞",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-071",
+      "civilianWord": "冰淇淋",
+      "undercoverWord": "雪糕",
+      "difficulty": "easy",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-072",
+      "civilianWord": "椰子水",
+      "undercoverWord": "矿泉水",
+      "difficulty": "easy",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-073",
+      "civilianWord": "狐狸",
+      "undercoverWord": "浣熊",
+      "difficulty": "easy",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-074",
+      "civilianWord": "快递员",
+      "undercoverWord": "外卖员",
+      "difficulty": "easy",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-075",
+      "civilianWord": "镜子",
+      "undercoverWord": "相框",
+      "difficulty": "easy",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-076",
+      "civilianWord": "车站",
+      "undercoverWord": "机场",
+      "difficulty": "easy",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-077",
+      "civilianWord": "瑜伽",
+      "undercoverWord": "普拉提",
+      "difficulty": "easy",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-078",
+      "civilianWord": "演唱会",
+      "undercoverWord": "音乐节",
+      "difficulty": "easy",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-079",
+      "civilianWord": "儿童节",
+      "undercoverWord": "生日",
+      "difficulty": "easy",
+      "category": "节日"
+    },
+    {
+      "id": "undercover-080",
+      "civilianWord": "满足",
+      "undercoverWord": "幸福",
+      "difficulty": "easy",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-081",
+      "civilianWord": "煎饼",
+      "undercoverWord": "手抓饼",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-082",
+      "civilianWord": "拿铁",
+      "undercoverWord": "摩卡",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-083",
+      "civilianWord": "水母",
+      "undercoverWord": "海星",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-084",
+      "civilianWord": "主持人",
+      "undercoverWord": "播音员",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-085",
+      "civilianWord": "便签",
+      "undercoverWord": "书签",
+      "difficulty": "medium",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-086",
+      "civilianWord": "客厅",
+      "undercoverWord": "包厢",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-087",
+      "civilianWord": "骑行",
+      "undercoverWord": "徒步",
+      "difficulty": "medium",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-088",
+      "civilianWord": "露营",
+      "undercoverWord": "野餐",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-089",
+      "civilianWord": "午后阳光",
+      "undercoverWord": "傍晚微风",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-090",
+      "civilianWord": "松弛",
+      "undercoverWord": "自在",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-091",
+      "civilianWord": "小笼包",
+      "undercoverWord": "烧麦",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-092",
+      "civilianWord": "乌龙奶茶",
+      "undercoverWord": "茉莉奶茶",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-093",
+      "civilianWord": "猫头鹰",
+      "undercoverWord": "啄木鸟",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-094",
+      "civilianWord": "花店店员",
+      "undercoverWord": "园丁",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-095",
+      "civilianWord": "收纳盒",
+      "undercoverWord": "文件夹",
+      "difficulty": "medium",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-096",
+      "civilianWord": "书店",
+      "undercoverWord": "文具店",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-097",
+      "civilianWord": "排球",
+      "undercoverWord": "网球",
+      "difficulty": "medium",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-098",
+      "civilianWord": "明信片",
+      "undercoverWord": "冰箱贴",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-099",
+      "civilianWord": "阵雨",
+      "undercoverWord": "雷阵雨",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-100",
+      "civilianWord": "犹豫",
+      "undercoverWord": "纠结",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-101",
+      "civilianWord": "烤红薯",
+      "undercoverWord": "玉米",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-102",
+      "civilianWord": "红茶",
+      "undercoverWord": "花茶",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-103",
+      "civilianWord": "刺猬",
+      "undercoverWord": "仓鼠",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-104",
+      "civilianWord": "修理师",
+      "undercoverWord": "工程师",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-105",
+      "civilianWord": "窗帘",
+      "undercoverWord": "百叶窗",
+      "difficulty": "medium",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-106",
+      "civilianWord": "阳台",
+      "undercoverWord": "天台",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-107",
+      "civilianWord": "跳绳",
+      "undercoverWord": "踢毽子",
+      "difficulty": "medium",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-108",
+      "civilianWord": "温泉",
+      "undercoverWord": "民宿",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-109",
+      "civilianWord": "晴转多云",
+      "undercoverWord": "阴转小雨",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-110",
+      "civilianWord": "安心",
+      "undercoverWord": "踏实",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-111",
+      "civilianWord": "蛋挞",
+      "undercoverWord": "泡芙",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-112",
+      "civilianWord": "美式",
+      "undercoverWord": "冷萃",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-113",
+      "civilianWord": "海豚",
+      "undercoverWord": "鲸鱼",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-114",
+      "civilianWord": "咖啡师",
+      "undercoverWord": "调饮师",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-115",
+      "civilianWord": "小风扇",
+      "undercoverWord": "加湿器",
+      "difficulty": "medium",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-116",
+      "civilianWord": "夜市",
+      "undercoverWord": "小吃街",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-117",
+      "civilianWord": "保龄球",
+      "undercoverWord": "飞镖",
+      "difficulty": "medium",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-118",
+      "civilianWord": "登机牌",
+      "undercoverWord": "车票",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-119",
+      "civilianWord": "清晨薄雾",
+      "undercoverWord": "夜晚星空",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-120",
+      "civilianWord": "期待",
+      "undercoverWord": "向往",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-121",
+      "civilianWord": "汤圆",
+      "undercoverWord": "元宵",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-122",
+      "civilianWord": "豆花",
+      "undercoverWord": "双皮奶",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-123",
+      "civilianWord": "骆驼",
+      "undercoverWord": "羊驼",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-124",
+      "civilianWord": "图书管理员",
+      "undercoverWord": "档案管理员",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-125",
+      "civilianWord": "雨伞",
+      "undercoverWord": "遮阳伞",
+      "difficulty": "medium",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-126",
+      "civilianWord": "博物馆",
+      "undercoverWord": "展览馆",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-127",
+      "civilianWord": "划船",
+      "undercoverWord": "皮划艇",
+      "difficulty": "medium",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-128",
+      "civilianWord": "游客中心",
+      "undercoverWord": "售票处",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-129",
+      "civilianWord": "小雪",
+      "undercoverWord": "霜冻",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-130",
+      "civilianWord": "惊讶",
+      "undercoverWord": "意外",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-131",
+      "civilianWord": "粽子",
+      "undercoverWord": "饭团",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-132",
+      "civilianWord": "芒果汁",
+      "undercoverWord": "百香果汁",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-133",
+      "civilianWord": "金鱼",
+      "undercoverWord": "锦鲤",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-134",
+      "civilianWord": "编剧",
+      "undercoverWord": "导演",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-135",
+      "civilianWord": "闹钟",
+      "undercoverWord": "计时器",
+      "difficulty": "medium",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-136",
+      "civilianWord": "会议室",
+      "undercoverWord": "自习室",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-137",
+      "civilianWord": "台球",
+      "undercoverWord": "桌球",
+      "difficulty": "medium",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-138",
+      "civilianWord": "观光车",
+      "undercoverWord": "缆车",
+      "difficulty": "medium",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-139",
+      "civilianWord": "暖阳",
+      "undercoverWord": "微光",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-140",
+      "civilianWord": "热闹",
+      "undercoverWord": "欢快",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-141",
+      "civilianWord": "烤冷面",
+      "undercoverWord": "炒年糕",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-142",
+      "civilianWord": "可可",
+      "undercoverWord": "巧克力奶",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-143",
+      "civilianWord": "蝴蝶",
+      "undercoverWord": "蜻蜓",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-144",
+      "civilianWord": "翻译员",
+      "undercoverWord": "讲解员",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-145",
+      "civilianWord": "拖鞋",
+      "undercoverWord": "凉鞋",
+      "difficulty": "medium",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-146",
+      "civilianWord": "花园",
+      "undercoverWord": "庭院",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-147",
+      "civilianWord": "慢跑",
+      "undercoverWord": "快走",
+      "difficulty": "medium",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-148",
+      "civilianWord": "攻略",
+      "undercoverWord": "行程单",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-149",
+      "civilianWord": "多云",
+      "undercoverWord": "阴天",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-150",
+      "civilianWord": "清醒",
+      "undercoverWord": "精神",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-151",
+      "civilianWord": "凉面",
+      "undercoverWord": "拌粉",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-152",
+      "civilianWord": "冰茶",
+      "undercoverWord": "冰咖啡",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-153",
+      "civilianWord": "蜜蜂",
+      "undercoverWord": "蚂蚁",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-154",
+      "civilianWord": "店长",
+      "undercoverWord": "前台",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-155",
+      "civilianWord": "纸巾盒",
+      "undercoverWord": "垃圾桶",
+      "difficulty": "medium",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-156",
+      "civilianWord": "电梯",
+      "undercoverWord": "楼梯",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-157",
+      "civilianWord": "合唱",
+      "undercoverWord": "朗诵",
+      "difficulty": "medium",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-158",
+      "civilianWord": "候车室",
+      "undercoverWord": "登机口",
+      "difficulty": "medium",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-159",
+      "civilianWord": "晚霞",
+      "undercoverWord": "落日",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-160",
+      "civilianWord": "满足",
+      "undercoverWord": "充实",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-161",
+      "civilianWord": "番茄炒蛋",
+      "undercoverWord": "青椒炒蛋",
+      "difficulty": "medium",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-162",
+      "civilianWord": "草莓奶昔",
+      "undercoverWord": "香蕉奶昔",
+      "difficulty": "medium",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-163",
+      "civilianWord": "孔雀",
+      "undercoverWord": "天鹅",
+      "difficulty": "medium",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-164",
+      "civilianWord": "采购员",
+      "undercoverWord": "陈列师",
+      "difficulty": "medium",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-165",
+      "civilianWord": "毛毯",
+      "undercoverWord": "披肩",
+      "difficulty": "medium",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-166",
+      "civilianWord": "便利店",
+      "undercoverWord": "超市",
+      "difficulty": "medium",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-167",
+      "civilianWord": "飞盘",
+      "undercoverWord": "沙包",
+      "difficulty": "medium",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-168",
+      "civilianWord": "古城",
+      "undercoverWord": "古镇",
+      "difficulty": "medium",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-169",
+      "civilianWord": "春雨",
+      "undercoverWord": "秋雨",
+      "difficulty": "medium",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-170",
+      "civilianWord": "机灵",
+      "undercoverWord": "敏捷",
+      "difficulty": "medium",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-171",
+      "civilianWord": "菜单",
+      "undercoverWord": "食谱",
+      "difficulty": "hard",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-172",
+      "civilianWord": "香气",
+      "undercoverWord": "味道",
+      "difficulty": "hard",
+      "category": "食物"
+    },
+    {
+      "id": "undercover-173",
+      "civilianWord": "茶包",
+      "undercoverWord": "茶叶",
+      "difficulty": "hard",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-174",
+      "civilianWord": "奶泡",
+      "undercoverWord": "泡沫",
+      "difficulty": "hard",
+      "category": "饮品"
+    },
+    {
+      "id": "undercover-175",
+      "civilianWord": "爪子",
+      "undercoverWord": "翅膀",
+      "difficulty": "hard",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-176",
+      "civilianWord": "巢穴",
+      "undercoverWord": "洞穴",
+      "difficulty": "hard",
+      "category": "动物"
+    },
+    {
+      "id": "undercover-177",
+      "civilianWord": "策划",
+      "undercoverWord": "运营",
+      "difficulty": "hard",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-178",
+      "civilianWord": "编辑",
+      "undercoverWord": "校对",
+      "difficulty": "hard",
+      "category": "职业"
+    },
+    {
+      "id": "undercover-179",
+      "civilianWord": "杯垫",
+      "undercoverWord": "桌垫",
+      "difficulty": "hard",
+      "category": "日用品"
+    },
+    {
+      "id": "undercover-180",
+      "civilianWord": "抽屉",
+      "undercoverWord": "柜门",
+      "difficulty": "hard",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-181",
+      "civilianWord": "走廊",
+      "undercoverWord": "过道",
+      "difficulty": "hard",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-182",
+      "civilianWord": "前台",
+      "undercoverWord": "吧台",
+      "difficulty": "hard",
+      "category": "地点"
+    },
+    {
+      "id": "undercover-183",
+      "civilianWord": "热身",
+      "undercoverWord": "拉伸",
+      "difficulty": "hard",
+      "category": "运动"
+    },
+    {
+      "id": "undercover-184",
+      "civilianWord": "节拍",
+      "undercoverWord": "旋律",
+      "difficulty": "hard",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-185",
+      "civilianWord": "旁白",
+      "undercoverWord": "台词",
+      "difficulty": "hard",
+      "category": "娱乐"
+    },
+    {
+      "id": "undercover-186",
+      "civilianWord": "检票口",
+      "undercoverWord": "安检口",
+      "difficulty": "hard",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-187",
+      "civilianWord": "站台",
+      "undercoverWord": "月台",
+      "difficulty": "hard",
+      "category": "交通"
+    },
+    {
+      "id": "undercover-188",
+      "civilianWord": "路线",
+      "undercoverWord": "地图",
+      "difficulty": "hard",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-189",
+      "civilianWord": "清单",
+      "undercoverWord": "攻略",
+      "difficulty": "hard",
+      "category": "旅行"
+    },
+    {
+      "id": "undercover-190",
+      "civilianWord": "灯笼",
+      "undercoverWord": "彩灯",
+      "difficulty": "hard",
+      "category": "节日"
+    },
+    {
+      "id": "undercover-191",
+      "civilianWord": "花环",
+      "undercoverWord": "彩带",
+      "difficulty": "hard",
+      "category": "节日"
+    },
+    {
+      "id": "undercover-192",
+      "civilianWord": "微风",
+      "undercoverWord": "清风",
+      "difficulty": "hard",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-193",
+      "civilianWord": "雾气",
+      "undercoverWord": "水汽",
+      "difficulty": "hard",
+      "category": "天气"
+    },
+    {
+      "id": "undercover-194",
+      "civilianWord": "惬意",
+      "undercoverWord": "舒心",
+      "difficulty": "hard",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-195",
+      "civilianWord": "期待感",
+      "undercoverWord": "仪式感",
+      "difficulty": "hard",
+      "category": "情绪"
+    },
+    {
+      "id": "undercover-196",
+      "civilianWord": "课间",
+      "undercoverWord": "下课",
+      "difficulty": "hard",
+      "category": "校园"
+    },
+    {
+      "id": "undercover-197",
+      "civilianWord": "笔记",
+      "undercoverWord": "讲义",
+      "difficulty": "hard",
+      "category": "校园"
+    },
+    {
+      "id": "undercover-198",
+      "civilianWord": "靠垫",
+      "undercoverWord": "坐垫",
+      "difficulty": "hard",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-199",
+      "civilianWord": "桌角",
+      "undercoverWord": "墙角",
+      "difficulty": "hard",
+      "category": "房间物品"
+    },
+    {
+      "id": "undercover-200",
+      "civilianWord": "口号",
+      "undercoverWord": "标语",
+      "difficulty": "hard",
+      "category": "娱乐"
+    }
+  ]
+}

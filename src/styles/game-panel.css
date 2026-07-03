@@ -725,3 +725,250 @@
     width: 100%;
   }
 }
+
+/* Lightweight party game tools */
+.lite-tool-panel {
+  gap: 1rem;
+}
+
+.lite-tool-play {
+  padding: 1rem 1.1rem;
+  background: rgba(10, 14, 26, 0.62);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.lite-tool-title {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--purple-light);
+}
+
+.lite-tool-hint,
+.lite-tool-empty,
+.lite-tool-message,
+.lite-tool-footer,
+.lite-tool-done {
+  margin: 0;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+
+.lite-tool-empty,
+.lite-tool-done {
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.lite-tool-done {
+  color: var(--purple-light);
+  font-weight: 600;
+}
+
+.lite-tool-card {
+  padding: 0.85rem 1rem;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  border-radius: 10px;
+}
+
+.lite-tool-row {
+  margin: 0 0 0.4rem;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+}
+
+.lite-tool-row span {
+  display: inline-block;
+  min-width: 2.5rem;
+  color: var(--purple-light);
+  font-weight: 600;
+  margin-right: 0.35rem;
+}
+
+.lite-tool-row:last-child {
+  margin-bottom: 0;
+}
+
+.lite-tool-case-title {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lite-tool-case-setup {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+.lite-tool-meta {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.lite-tool-king {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.lite-tool-command,
+.lite-tool-identity,
+.lite-tool-word {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.lite-tool-identity {
+  font-size: 1.35rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.lite-tool-word {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 0.65rem;
+}
+
+.lite-tool-hidden,
+.lite-tool-player {
+  margin: 0;
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.lite-tool-hidden {
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.5rem 0;
+}
+
+.lite-tool-player {
+  font-weight: 600;
+  color: var(--purple-light);
+  margin-bottom: 0.65rem;
+}
+
+.lite-tool-result {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.lite-tool-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+}
+
+.lite-tool-actions--row {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.lite-tool-btn {
+  font-size: 0.84rem;
+  padding: 0.55rem 0.65rem;
+  min-height: 40px;
+}
+
+.lite-tool-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.lite-tool-input-row label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.lite-tool-number {
+  width: 5rem;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background: rgba(5, 8, 18, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+}
+
+.lite-tool-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.lite-tool-textarea {
+  width: 100%;
+  min-height: 120px;
+  padding: 0.65rem 0.75rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: rgba(5, 8, 18, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.lite-tool-textarea:focus,
+.lite-tool-number:focus {
+  outline: none;
+  border-color: rgba(167, 139, 250, 0.4);
+}
+
+.lite-tool-host {
+  padding-top: 0.25rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.lite-tool-host-label {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+.lite-tool-host-body {
+  font-size: 0.84rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.lite-tool-host-body p {
+  margin: 0 0 0.25rem;
+}
+
+.lite-tool-answer {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .lite-tool-actions,
+  .lite-tool-actions--row {
+    grid-template-columns: 1fr;
+  }
+}
