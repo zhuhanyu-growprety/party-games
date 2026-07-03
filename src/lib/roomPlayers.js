@@ -1,14 +1,19 @@
 import {
+  resolveTabPlayerIdForRoom,
   getTabPlayerId,
   getTabPlayerName,
   setTabPlayerName,
   getTabPlayerAvatarSlot,
   setTabPlayerAvatarSlot,
+  clearTabRoomBinding,
 } from './tabPlayer';
 
 const MAX_PLAYERS = 12;
 const STALE_MS = 60_000;
+const HEARTBEAT_MS = 12_000;
 const FALLBACK_NICKNAME = '临时玩家';
+
+export { HEARTBEAT_MS };
 
 export function roomPlayersStorageKey(code) {
   return `party-games:room:${code}:players`;
@@ -31,7 +36,7 @@ export function setRoomPlayers(code, players) {
 
 function pruneStalePlayers(players) {
   const now = Date.now();
-  return players.filter((player) => now - player.lastSeen < STALE_MS);
+  return players.filter((player) => now - (player.lastSeen ?? 0) < STALE_MS);
 }
 
 function normalizePlayer(player, index) {
@@ -51,87 +56,110 @@ function pickAvatarSlot(existingPlayers) {
   return (existingPlayers.length % 12) + 1;
 }
 
+function ensureHost(players) {
+  const active = players.filter(Boolean);
+  if (!active.length) return active;
+
+  const hasHost = active.some((player) => player.isHost);
+  if (hasHost) return active;
+
+  const earliest = [...active].sort((a, b) => (a.joinedAt ?? 0) - (b.joinedAt ?? 0))[0];
+  return active.map((player) => ({
+    ...player,
+    isHost: player.id === earliest.id,
+  }));
+}
+
+function commitPlayers(code, incomingPlayers) {
+  const stored = pruneStalePlayers(getRoomPlayers(code));
+  const merged = new Map(stored.map((player) => [player.id, player]));
+
+  for (const player of incomingPlayers) {
+    const existing = merged.get(player.id);
+    if (!existing) {
+      merged.set(player.id, player);
+      continue;
+    }
+
+    merged.set(player.id, {
+      ...existing,
+      ...player,
+      joinedAt: existing.joinedAt ?? player.joinedAt,
+      isHost: existing.isHost || player.isHost,
+      lastSeen: Math.max(existing.lastSeen ?? 0, player.lastSeen ?? 0),
+    });
+  }
+
+  const withHost = ensureHost(Array.from(merged.values()));
+  const normalized = withHost.map(normalizePlayer);
+  setRoomPlayers(code, normalized);
+  return normalized;
+}
+
+function upsertCurrentPlayer(code, nickname, playerId) {
+  const name = nickname.trim() || getTabPlayerName() || FALLBACK_NICKNAME;
+  setTabPlayerName(name);
+
+  const currentPlayers = pruneStalePlayers(getRoomPlayers(code));
+  const byId = new Map(currentPlayers.map((player) => [player.id, player]));
+  const now = Date.now();
+  const existing = byId.get(playerId);
+
+  if (existing) {
+    byId.set(playerId, {
+      ...existing,
+      name,
+      lastSeen: now,
+    });
+  } else if (currentPlayers.length >= MAX_PLAYERS) {
+    return currentPlayers.map(normalizePlayer);
+  } else {
+    const avatarSlot = getTabPlayerAvatarSlot() ?? pickAvatarSlot(Array.from(byId.values()));
+    setTabPlayerAvatarSlot(avatarSlot);
+
+    byId.set(playerId, {
+      id: playerId,
+      playerId,
+      name,
+      avatarSlot,
+      isHost: false,
+      joinedAt: now,
+      lastSeen: now,
+    });
+  }
+
+  return commitPlayers(code, Array.from(byId.values()));
+}
+
 export function getDisplayPlayers(code) {
-  return pruneStalePlayers(getRoomPlayers(code)).map(normalizePlayer);
+  return ensureHost(pruneStalePlayers(getRoomPlayers(code))).map(normalizePlayer);
 }
 
 export function ensureTabPlayerInRoom(code, nickname) {
   if (!code) return [];
 
-  const playerId = getTabPlayerId();
-  const name = nickname.trim() || getTabPlayerName() || FALLBACK_NICKNAME;
-  setTabPlayerName(name);
+  const playerId = resolveTabPlayerIdForRoom(code, (roomCode) =>
+    pruneStalePlayers(getRoomPlayers(roomCode)),
+  );
 
-  let players = pruneStalePlayers(getRoomPlayers(code));
-  const existingIndex = players.findIndex((p) => p.id === playerId);
-
-  if (existingIndex >= 0) {
-    const existing = players[existingIndex];
-    players[existingIndex] = {
-      ...existing,
-      name,
-      lastSeen: Date.now(),
-    };
-    const normalized = players.map(normalizePlayer);
-    setRoomPlayers(code, normalized);
-    return normalized;
-  }
-
-  if (players.length >= MAX_PLAYERS) {
-    return players.map(normalizePlayer);
-  }
-
-  const avatarSlot = getTabPlayerAvatarSlot() ?? pickAvatarSlot(players);
-  setTabPlayerAvatarSlot(avatarSlot);
-
-  const now = Date.now();
-  const updated = [
-    ...players,
-    {
-      id: playerId,
-      playerId,
-      name,
-      avatarSlot,
-      isHost: players.length === 0,
-      joinedAt: now,
-      lastSeen: now,
-    },
-  ].map(normalizePlayer);
-
-  setRoomPlayers(code, updated);
-  return updated;
+  return upsertCurrentPlayer(code, nickname, playerId);
 }
 
 export function touchTabPlayerHeartbeat(code, nickname) {
   if (!code) return [];
-
-  const playerId = getTabPlayerId();
-  const name = nickname.trim() || getTabPlayerName() || FALLBACK_NICKNAME;
-  let players = pruneStalePlayers(getRoomPlayers(code));
-  const index = players.findIndex((p) => p.id === playerId);
-
-  if (index >= 0) {
-    players[index] = {
-      ...players[index],
-      name,
-      lastSeen: Date.now(),
-    };
-    const normalized = players.map(normalizePlayer);
-    setRoomPlayers(code, normalized);
-    return normalized;
-  }
-
-  return ensureTabPlayerInRoom(code, nickname);
+  return upsertCurrentPlayer(code, nickname, getTabPlayerId());
 }
 
 export function removeTabPlayerFromRoom(code) {
-  if (!code) return;
+  if (!code) return [];
 
   const playerId = getTabPlayerId();
-  const players = getRoomPlayers(code)
-    .filter((p) => p.id !== playerId)
-    .map(normalizePlayer);
-  setRoomPlayers(code, players);
+  const remaining = pruneStalePlayers(getRoomPlayers(code)).filter(
+    (player) => player.id !== playerId,
+  );
+  const next = commitPlayers(code, remaining);
+  clearTabRoomBinding();
+  return next;
 }
 
 export function isTabPlayerHost(players, tabPlayerId) {

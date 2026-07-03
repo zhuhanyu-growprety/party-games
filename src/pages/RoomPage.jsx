@@ -8,6 +8,7 @@ import {
   getDisplayPlayers,
   isTabPlayerHost,
   roomPlayersStorageKey,
+  HEARTBEAT_MS,
 } from '../lib/roomPlayers';
 import { getTabPlayerId } from '../lib/tabPlayer';
 import { getAllGames, getGameById } from '../lib/games';
@@ -24,7 +25,6 @@ const SWITCH_GAME_CONFIRM =
   '当前狼人杀本局已经开始，切换游戏会结束本局并清空身份，确定继续吗？';
 const LEAVE_ROOM_CONFIRM =
   '当前游戏已经开始，退出房间会结束本局，确定退出吗？';
-const HEARTBEAT_MS = 12_000;
 
 function resolveInitialGameId(searchParams) {
   const gameId = searchParams.get('game');
@@ -66,12 +66,12 @@ export default function RoomPage() {
       return next;
     }
 
-    ensureTabPlayerInRoom(code, nickname);
-    syncPlayers();
+    const joined = ensureTabPlayerInRoom(code, nickname);
+    setPlayers(joined);
 
     const heartbeat = setInterval(() => {
-      touchTabPlayerHeartbeat(code, nickname);
-      syncPlayers();
+      const next = touchTabPlayerHeartbeat(code, nickname);
+      setPlayers(next);
     }, HEARTBEAT_MS);
 
     function handleStorage(event) {
