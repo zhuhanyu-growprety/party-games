@@ -33,6 +33,10 @@ npm run dev
 npm run build
 ```
 
+## GitHub Pages
+
+推送到 `main` 分支后，GitHub Actions 会自动构建并部署到 GitHub Pages（仓库需开启 Pages，Source 选择 GitHub Actions）。
+
 ## 安全与内容边界
 
 - 不鼓励危险惩罚
