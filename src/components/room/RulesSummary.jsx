@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { getGameRules } from '../../lib/gameRules';
 
 const WEREWOLF_RULES = [
   '房主点击发牌，每人手机显示自己的身份',
@@ -7,13 +8,21 @@ const WEREWOLF_RULES = [
 ];
 
 const DEFAULT_RULES = [
-  '该游戏面板尚在开发中',
-  '当前仅展示占位界面',
-  '完整规则将在后续版本补充',
+  '当前版本提供玩法说明',
+  '完整互动功能后续补齐',
+  '可先按规则线下开玩',
 ];
 
 export default function RulesSummary({ game }) {
-  const rules = game?.id === 'werewolf' ? WEREWOLF_RULES : DEFAULT_RULES;
+  let rules = DEFAULT_RULES;
+
+  if (game?.id === 'werewolf') {
+    rules = WEREWOLF_RULES;
+  } else {
+    const sidebar = getGameRules(game?.id)?.sidebarSummary;
+    if (sidebar) rules = sidebar;
+  }
+
   const title = game ? `${game.title}规则简述` : '规则简述';
 
   return (

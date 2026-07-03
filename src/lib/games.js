@@ -1,5 +1,6 @@
 import gamesData from '../data/games.seed.json';
 import { publicAsset } from './assetPaths';
+import { getGameRules } from './gameRules';
 
 const GAME_ICONS = {
   undercover: '🕵️',
@@ -13,16 +14,6 @@ const GAME_ICONS = {
   wheel: '🎡',
 };
 
-const PLACEHOLDER_HINTS = {
-  undercover: '后续支持房间内发词，每个人只看到自己的词。',
-  king: '后续支持随机分配国王和编号。',
-  whoami: '后续支持给玩家分配身份词。',
-  garden: '后续支持随机生成主题，现场口头接龙。',
-  bomb: '后续支持生成炸弹数字并维护范围。',
-  'truth-dare': '后续支持随机抽取真心话或大冒险。',
-  'turtle-soup': '后续支持汤面题库和主持人答案。',
-  wheel: '后续支持自定义选项并随机抽取。',
-};
 
 function resolveGameImage(game) {
   if (!game?.image) return game;
@@ -44,5 +35,5 @@ export function getGameIcon(id) {
 }
 
 export function getPlaceholderHint(id) {
-  return PLACEHOLDER_HINTS[id] ?? '该游戏面板正在建设中。';
+  return getGameRules(id)?.summary ?? '该游戏面板正在建设中。';
 }
