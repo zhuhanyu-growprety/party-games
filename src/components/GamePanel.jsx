@@ -1,4 +1,5 @@
 import WerewolfPanel from './games/WerewolfPanel';
+import TruthOrDarePanel from './games/TruthOrDarePanel';
 import PlaceholderPanel from './games/PlaceholderPanel';
 
 export default function GamePanel({ game, werewolfSession, onWerewolfSessionChange }) {
@@ -17,6 +18,10 @@ export default function GamePanel({ game, werewolfSession, onWerewolfSessionChan
         onSessionChange={onWerewolfSessionChange}
       />
     );
+  }
+
+  if (game.id === 'truth-dare') {
+    return <TruthOrDarePanel game={game} />;
   }
 
   return <PlaceholderPanel game={game} />;

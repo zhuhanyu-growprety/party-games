@@ -479,3 +479,85 @@
     text-align: center;
   }
 }
+
+/* Truth or dare picker */
+.tod-panel .tod-rules-compact {
+  gap: 0.65rem;
+}
+
+.tod-picker {
+  padding: 1rem 1.1rem;
+  background: rgba(10, 14, 26, 0.62);
+  border: 1px solid rgba(167, 139, 250, 0.22);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.tod-picker-title {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--purple-light);
+  margin: 0;
+}
+
+.tod-empty {
+  margin: 0;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 0.75rem 0.5rem;
+}
+
+.tod-result {
+  padding: 0.85rem 1rem;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.tod-type {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--purple-light);
+  background: var(--accent-dim);
+  padding: 0.2rem 0.55rem;
+  border-radius: 4px;
+  margin-bottom: 0.55rem;
+}
+
+.tod-text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--text-primary);
+}
+
+.tod-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.55rem;
+}
+
+.tod-btn {
+  font-size: 0.84rem;
+  padding: 0.55rem 0.65rem;
+  min-height: 40px;
+}
+
+.tod-safety {
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  text-align: center;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .tod-actions {
+    grid-template-columns: 1fr;
+  }
+}
