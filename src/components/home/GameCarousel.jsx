@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { getAllGames } from '../../lib/games';
 
-export default function GameCarousel() {
+export default function GameCarousel({ onGameClick }) {
   const games = getAllGames();
   const scrollRef = useRef(null);
 
@@ -11,6 +11,13 @@ export default function GameCarousel() {
     if (!el) return;
     const amount = el.clientWidth * 0.72;
     el.scrollBy({ left: direction * amount, behavior: 'smooth' });
+  }
+
+  function handleCardKeyDown(event, gameId) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      onGameClick?.(gameId);
+    }
   }
 
   return (
@@ -33,7 +40,15 @@ export default function GameCarousel() {
 
         <div className="home-games-scroll" ref={scrollRef}>
           {games.map((game) => (
-            <article key={game.id} className="home-game-card">
+            <article
+              key={game.id}
+              className="home-game-card home-game-card--clickable"
+              role="button"
+              tabIndex={0}
+              onClick={() => onGameClick?.(game.id)}
+              onKeyDown={(event) => handleCardKeyDown(event, game.id)}
+              aria-label={`开始${game.title}`}
+            >
               <div className="home-game-image-wrap">
                 <img
                   className="home-game-image"

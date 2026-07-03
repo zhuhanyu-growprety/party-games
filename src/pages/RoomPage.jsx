@@ -1,7 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { getNickname, getRoomRole, getCreatedRoomCode } from '../lib/storage';
-import { ensureCurrentPlayerInRoom } from '../lib/roomPlayers';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
+import { getNickname } from '../lib/storage';
+import {
+  ensureTabPlayerInRoom,
+  touchTabPlayerHeartbeat,
+  removeTabPlayerFromRoom,
+  getDisplayPlayers,
+  isTabPlayerHost,
+  roomPlayersStorageKey,
+} from '../lib/roomPlayers';
+import { getTabPlayerId } from '../lib/tabPlayer';
 import { getAllGames, getGameById } from '../lib/games';
 import RoomHeader from '../components/room/RoomHeader';
 import PlayerList from '../components/room/PlayerList';
@@ -16,17 +24,23 @@ const SWITCH_GAME_CONFIRM =
   '当前狼人杀本局已经开始，切换游戏会结束本局并清空身份，确定继续吗？';
 const LEAVE_ROOM_CONFIRM =
   '当前游戏已经开始，退出房间会结束本局，确定退出吗？';
+const HEARTBEAT_MS = 12_000;
+
+function resolveInitialGameId(searchParams) {
+  const gameId = searchParams.get('game');
+  if (gameId && getGameById(gameId)) return gameId;
+  return 'werewolf';
+}
 
 export default function RoomPage() {
   const { code } = useParams();
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const nickname = getNickname();
-  const role = getRoomRole();
-  const createdCode = getCreatedRoomCode();
-  const isHost = role === 'host' && createdCode === code;
+  const tabPlayerId = getTabPlayerId();
 
   const games = getAllGames();
-  const [selectedGameId, setSelectedGameId] = useState('werewolf');
+  const [selectedGameId, setSelectedGameId] = useState(() => resolveInitialGameId(searchParams));
   const selectedGame = getGameById(selectedGameId);
   const [werewolfSession, setWerewolfSession] = useState(WEREWOLF_INITIAL_SESSION);
   const [startedGameId, setStartedGameId] = useState(null);
@@ -37,15 +51,48 @@ export default function RoomPage() {
   selectedGameIdRef.current = selectedGameId;
   startedGameIdRef.current = startedGameId;
 
+  const isHost = isTabPlayerHost(players, tabPlayerId);
+  const displayNickname = nickname.trim() || '临时玩家';
+
   useEffect(() => {
     if (!code) {
       setPlayers([]);
-      return;
+      return undefined;
     }
-    setPlayers(ensureCurrentPlayerInRoom(code, nickname, isHost));
-  }, [code, nickname, isHost]);
 
-  const displayNickname = nickname.trim() || '临时玩家';
+    function syncPlayers() {
+      const next = getDisplayPlayers(code);
+      setPlayers(next);
+      return next;
+    }
+
+    ensureTabPlayerInRoom(code, nickname);
+    syncPlayers();
+
+    const heartbeat = setInterval(() => {
+      touchTabPlayerHeartbeat(code, nickname);
+      syncPlayers();
+    }, HEARTBEAT_MS);
+
+    function handleStorage(event) {
+      if (event.key === roomPlayersStorageKey(code)) {
+        syncPlayers();
+      }
+    }
+
+    function handleUnload() {
+      removeTabPlayerFromRoom(code);
+    }
+
+    window.addEventListener('storage', handleStorage);
+    window.addEventListener('beforeunload', handleUnload);
+
+    return () => {
+      clearInterval(heartbeat);
+      window.removeEventListener('storage', handleStorage);
+      window.removeEventListener('beforeunload', handleUnload);
+    };
+  }, [code, nickname]);
 
   function handleWerewolfSessionChange(session) {
     setWerewolfSession(session);
@@ -96,6 +143,7 @@ export default function RoomPage() {
     if (currentStartedGameId) {
       if (!window.confirm(LEAVE_ROOM_CONFIRM)) return;
     }
+    removeTabPlayerFromRoom(code);
     navigate('/');
   }
 
@@ -115,6 +163,8 @@ export default function RoomPage() {
         onInvite={handleInvite}
         onExit={handleLeaveRoom}
       />
+
+      <p className="room-demo-note">当前版本为本地房间工具，适合线下传手机使用。</p>
 
       <div className="room-body">
         <aside className="room-sidebar room-sidebar-left">

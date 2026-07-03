@@ -525,6 +525,15 @@
   transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
 }
 
+.home-game-card--clickable {
+  cursor: pointer;
+}
+
+.home-game-card--clickable:focus-visible {
+  outline: 2px solid rgba(167, 139, 250, 0.55);
+  outline-offset: 2px;
+}
+
 .home-game-card:hover {
   border-color: rgba(167, 139, 250, 0.38);
   box-shadow:

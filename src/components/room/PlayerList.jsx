@@ -10,10 +10,10 @@ export default function PlayerList({ players, maxPlayers = 12 }) {
       </div>
       <ul className="player-list">
         {players.map((player) => (
-          <li key={player.playerId} className="player-item">
+          <li key={player.playerId || player.id} className="player-item">
             <span className="player-avatar">
               <img
-                src={getPlayerAvatar(player.slot)}
+                src={getPlayerAvatar(player.avatarSlot || player.slot)}
                 alt=""
                 aria-hidden="true"
               />

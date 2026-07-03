@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Home, LogIn, Smile, ScanLine } from 'lucide-react';
-import { getNickname, setNickname, setRoomRole, setCreatedRoomCode } from '../lib/storage';
-import { generateRoomCode, normalizeRoomCode, isValidRoomCode } from '../lib/room';
+import { getNickname, setNickname, setRoomRole } from '../lib/storage';
+import { normalizeRoomCode, isValidRoomCode } from '../lib/room';
+import { startHostRoom } from '../lib/roomEntry';
 import { publicAsset } from '../lib/assetPaths';
 import HomeNav from '../components/home/HomeNav';
 import FeatureCards from '../components/home/FeatureCards';
@@ -27,11 +28,11 @@ export default function PartyHomePage() {
   }
 
   function handleCreate() {
-    saveNickname();
-    const code = generateRoomCode();
-    setRoomRole('host');
-    setCreatedRoomCode(code);
-    navigate(`/room/${code}`);
+    startHostRoom(navigate, nickname);
+  }
+
+  function handleGameCardClick(gameId) {
+    startHostRoom(navigate, nickname, gameId);
   }
 
   function handleJoin() {
@@ -134,7 +135,7 @@ export default function PartyHomePage() {
         </div>
 
         <FeatureCards />
-        <GameCarousel />
+        <GameCarousel onGameClick={handleGameCardClick} />
       </main>
     </div>
   );
