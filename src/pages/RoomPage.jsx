@@ -8,10 +8,7 @@ import PlayerList from '../components/room/PlayerList';
 import GameList from '../components/room/GameList';
 import RulesSummary from '../components/room/RulesSummary';
 import GamePanel from '../components/GamePanel';
-import {
-  WEREWOLF_INITIAL_SESSION,
-  isWerewolfSessionStarted,
-} from '../components/games/WerewolfPanel';
+import { WEREWOLF_INITIAL_SESSION } from '../components/games/WerewolfPanel';
 import '../styles/room.css';
 import '../styles/game-panel.css';
 
@@ -32,12 +29,13 @@ export default function RoomPage() {
   const [selectedGameId, setSelectedGameId] = useState('werewolf');
   const selectedGame = getGameById(selectedGameId);
   const [werewolfSession, setWerewolfSession] = useState(WEREWOLF_INITIAL_SESSION);
+  const [startedGameId, setStartedGameId] = useState(null);
   const [players, setPlayers] = useState([]);
 
   const selectedGameIdRef = useRef(selectedGameId);
-  const werewolfSessionRef = useRef(werewolfSession);
+  const startedGameIdRef = useRef(startedGameId);
   selectedGameIdRef.current = selectedGameId;
-  werewolfSessionRef.current = werewolfSession;
+  startedGameIdRef.current = startedGameId;
 
   useEffect(() => {
     if (!code) {
@@ -49,25 +47,31 @@ export default function RoomPage() {
 
   const displayNickname = nickname.trim() || '临时玩家';
 
-  function isCurrentGameStarted() {
-    if (selectedGameIdRef.current === 'werewolf') {
-      return isWerewolfSessionStarted(werewolfSessionRef.current);
+  function handleWerewolfSessionChange(session) {
+    setWerewolfSession(session);
+    if (session.started) {
+      setStartedGameId('werewolf');
     }
-    return false;
   }
 
   function resetWerewolfSession() {
     setWerewolfSession(WEREWOLF_INITIAL_SESSION);
+    setStartedGameId(null);
   }
 
   function handleSelectGame(gameId) {
     if (gameId === selectedGameIdRef.current) return;
 
-    if (isCurrentGameStarted()) {
-      if (!window.confirm(SWITCH_GAME_CONFIRM)) return;
-      resetWerewolfSession();
+    const currentStartedGameId = startedGameIdRef.current || startedGameId;
+
+    if (!currentStartedGameId) {
+      setSelectedGameId(gameId);
+      return;
     }
 
+    if (!window.confirm(SWITCH_GAME_CONFIRM)) return;
+
+    resetWerewolfSession();
     setSelectedGameId(gameId);
   }
 
@@ -88,7 +92,8 @@ export default function RoomPage() {
   }
 
   function handleLeaveRoom() {
-    if (isCurrentGameStarted()) {
+    const currentStartedGameId = startedGameIdRef.current || startedGameId;
+    if (currentStartedGameId) {
       if (!window.confirm(LEAVE_ROOM_CONFIRM)) return;
     }
     navigate('/');
@@ -120,7 +125,7 @@ export default function RoomPage() {
           <GamePanel
             game={selectedGame}
             werewolfSession={werewolfSession}
-            onWerewolfSessionChange={setWerewolfSession}
+            onWerewolfSessionChange={handleWerewolfSessionChange}
           />
         </main>
 
